@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FarPlay Tools — Free Online Tools India</title>
+<meta name="description" content="Free online tools for Indians — GST Calculator, UPI QR Generator, Pincode Finder, Invoice Generator, YouTube Thumbnail, and more!">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6566333205320776" crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0CGN70KXS7"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-0CGN70KXS7');</script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0a0a0f;--surface:#13131a;--surface2:#1c1c28;--border:#2a2a3d;--accent:#7c3aed;--accent2:#06d6a0;--accent3:#f72585;--text:#e8e8f0;--text2:#8888aa;--mono:'Space Mono',monospace;--display:'Syne',sans-serif;--body:'DM Sans',sans-serif;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:var(--bg);color:var(--text);font-family:var(--body);min-height:100vh;}
+nav{display:flex;align-items:center;justify-content:space-between;padding:1rem 2rem;border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100;background:rgba(10,10,15,0.95);backdrop-filter:blur(20px);}
+.logo{font-family:var(--display);font-size:1.4rem;font-weight:800;letter-spacing:-1px;text-decoration:none;color:var(--text);}
+.logo span{color:var(--accent2);}
+.nav-links{display:flex;gap:1rem;}
+.nav-links a{color:var(--text2);text-decoration:none;font-size:0.85rem;transition:color 0.2s;}
+.nav-links a:hover{color:var(--accent2);}
+.search-bar{display:flex;gap:0.5rem;padding:1.5rem 2rem;max-width:700px;margin:0 auto;}
+.search-input{flex:1;background:var(--surface2);border:1px solid var(--border);border-radius:10px;padding:0.8rem 1.2rem;color:var(--text);font-size:1rem;outline:none;font-family:var(--body);}
+.search-input:focus{border-color:var(--accent2);}
+.search-btn{background:var(--accent);color:#fff;border:none;border-radius:10px;padding:0.8rem 1.5rem;cursor:pointer;font-size:0.9rem;font-weight:600;}
+.container{max-width:1200px;margin:0 auto;padding:1rem 2rem;}
+.section-title{font-family:var(--display);font-size:1.5rem;font-weight:800;margin-bottom:1rem;padding-top:1rem;}
+.tools-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1rem;margin-bottom:2rem;}
+.tool-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:1.5rem;transition:all 0.25s;cursor:pointer;}
+.tool-card:hover{border-color:var(--accent2);transform:translateY(-2px);}
+.tool-icon{font-size:2rem;margin-bottom:0.5rem;}
+.tool-name{font-weight:700;font-size:1rem;margin-bottom:0.3rem;}
+.tool-desc{font-size:0.82rem;color:var(--text2);margin-bottom:1rem;}
+.tool-content{display:none;margin-top:1rem;border-top:1px solid var(--border);padding-top:1rem;}
+.tool-card.open .tool-content{display:block;}
+.btn{padding:0.6rem 1.2rem;border-radius:8px;font-size:0.85rem;font-weight:600;cursor:pointer;border:none;font-family:var(--body);transition:all 0.2s;}
+.btn-primary{background:var(--accent);color:#fff;}
+.btn-secondary{background:var(--surface2);color:var(--text);border:1px solid var(--border);}
+input,select,textarea{background:var(--surface2);border:1px solid var(--border);border-radius:8px;padding:0.6rem 1rem;color:var(--text);font-size:0.9rem;outline:none;font-family:var(--body);width:100%;}
+input:focus,select:focus,textarea:focus{border-color:var(--accent2);}
+.result-box{background:#000;border-radius:8px;padding:1rem;font-family:var(--mono);font-size:0.85rem;color:var(--accent2);margin-top:0.8rem;min-height:50px;word-break:break-all;}
+.hidden{display:none!important;}
+footer{border-top:1px solid var(--border);padding:1.5rem 2rem;text-align:center;color:var(--text2);font-size:0.8rem;margin-top:2rem;}
+footer a{color:var(--accent2);text-decoration:none;margin:0 0.5rem;}
+@media(max-width:600px){.tools-grid{grid-template-columns:1fr;}.nav-links{display:none;}}
+</style>
+</head>
+<body>
+<nav>
+  <a href="index.html" class="logo">Far<span>Play</span></a>
+  <div class="nav-links">
+    <a href="index.html">🏠 Home</a>
+    <a href="tools.html">🛠️ Tools</a>
+    <a href="blog.html">📝 Blog</a>
+    <a href="about.html">ℹ️ About</a>
+    <a href="contact.html">📬 Contact</a>
+  </div>
+</nav>
+
+<div class="search-bar">
+  <input class="search-input" id="search-input" placeholder="🔍 Tool dhundho... (GST, QR, Pincode, Invoice...)" oninput="searchTools()">
+  <button class="search-btn" onclick="searchTools()">Search</button>
+</div>
+
+<div class="container">
+
+<!-- AD BANNER -->
+<div style="background:var(--surface);border:1px dashed var(--border);border-radius:10px;padding:1.5rem;text-align:center;color:var(--text2);font-size:0.82rem;margin-bottom:1.5rem">📢 [Google AdSense Banner]</div>
+
+<!-- INDIAN TOOLS -->
+<div class="section-title">🇮🇳 Indian Tools</div>
+<div class="tools-grid" id="tools-grid">
+
+  <!-- GST CALCULATOR -->
+  <div class="tool-card" id="tool-gst" onclick="toggleTool('gst',event)">
+    <div class="tool-icon">🧾</div>
+    <div class="tool-name">GST Calculator</div>
+    <div class="tool-desc">Business ke liye GST calculate karo instantly</div>
+    <div class="tool-content" onclick="event.stopPropagation()">
+      <div style="display:flex;flex-direction:column;gap:0.5rem">
+        <input type="number" id="gst-amount" placeholder="Amount (₹)" oninput="calcGST()">
+        <select id="gst-rate" onchange="calcGST()">
+          <option value="5">5% GST</option>
+          <option value="12">12% GST</option>
+          <option value="18" selected>18% GST</option>
+          <option value="28">28% GST</option>
+        </select>
+        <select id="gst-type" onchange="calcGST()">
+          <option value="excl">Exclusive (amount + GST)</option>
+          <option value="incl">Inclusive (amount mein GST included)</option>
+        </select>
+      </div>
+      <div class="result-box" id="gst-result">Amount daalo...</div>
+    </div>
+  </div>
+
+  <!-- UPI QR GENERATOR -->
+  <div class="tool-card" id="tool-upi" onclick="toggleTool('upi',event)">
+    <div class="tool-icon">📱</div>
+    <div class="tool-name">UPI QR Generator</div>
+    <div class="tool-desc">Apna UPI payment QR code banao free mein</div>
+    <div class="tool-content" onclick="event.stopPropagation()">
+      <div style="display:flex;flex-direction:column;gap:0.5rem">
+        <input id="upi-id" placeholder="UPI ID (example@paytm)" oninput="genUPI()">
+        <input id="upi-name" placeholder="Aapka naam" oninput="genUPI()">
+        <input type="number" id="upi-amount" placeholder="Amount (optional)" oninput="genUPI()">
+      </div>
+      <div id="upi-result" style="text-align:center;margin-top:0.8rem;min-height:60px;color:var(--text2);font-size:0.85rem">UPI ID daalo...</div>
+    </div>
+  </div>
+
+  <!-- PINCODE FINDER -->
+  <div class="tool-card" id="tool-pin" onclick="toggleTool('pin',event)">
+    <div class="tool-icon">📍</div>
+    <div class="tool-name">Pincode Finder</div>
+    <div class="tool-desc">Pincode se address aur post office details</div>
+    <div class="tool-content" onclick="event.stopPropagation()">
+      <div style="display:flex;gap:0.5rem">
+        <input id="pin-code" placeholder="6 digit pincode" maxlength="6" type="number">
+        <button class="btn btn-primary" onclick="findPincode()" style="white-space:nowrap">Find</button>
+      </div>
+      <div class="result-box" id="pin-result" style="color:var(--text)">Pincode daalo...</div>
+    </div>
+  </div>
+
+  <!-- YOUTUBE THUMBNAIL -->
+  <div class="tool-card" id="tool-yt" onclick="toggleTool('yt',event)">
+    <div class="tool-icon">📺</div>
+    <div class="tool-name">YouTube Thumbnail Downloader</div>
+    <div class="tool-desc">Kisi bhi YouTube video ka HD thumbnail download karo</div>
+    <div class="tool-content" onclick="event.stopPropagation()">
+      <input id="yt-url" placeholder="YouTube URL paste karo" oninput="showYTThumb()">
+      <div id="yt-result" style="margin-top:0.8rem;text-align:center"></div>
+    </div>
+  </div>
+
+  <!-- INVOICE GENERATOR -->
+  <div class="tool-card" id="tool-inv" onclick="toggleTool('inv',event)">
+    <div class="tool-icon">🧾</div>
+    <div class="tool-name">Invoice Generator</div>
+    <div class="tool-desc">Professional invoice banao aur print karo</div>
+    <div class="tool-content" onclick="event.stopPropagation()">
+      <div style="display:flex;flex-direction:column;gap:0.5rem">
+        <input id="inv-from" placeholder="Aapka naam / Company">
+        <input id="inv-to" placeholder="Client ka naam">
+        <input id="inv-item" placeholder="Item / Service">
+        <input type="number" id="inv-amount" placeholder="Amount (₹)">
+        <input id="inv-date" type="date">
+        <button class="btn btn-primary" onclick="generateInvoice()">🖨️ Invoice Generate Karo</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- COLOR PALETTE -->
+  <div class="tool-card" id="tool-palette" onclick="toggleTool('palette',event)">
+    <div class="tool-icon">🎨</div>
+    <div class="tool-name">Color Palette Generator</div>
+    <div class="tool-desc">Designers ke liye beautiful color palettes</div>
+    <div class="tool-content" onclick="event.stopPropagation()">
+      <div style="display:flex;gap:0.5rem;margin-bottom:0.8rem">
+        <input type="color" id="palette-base" value="#7c3aed" style="width:60px;height:40px;padding:2px;cursor:pointer" onchange="genPalette()">
+        <select id="palette-type" onchange="genPalette()" style="flex:1">
+          <option value="shades">Shades</option>
+          <option value="complementary">Complementary</option>
+          <option value="triadic">Triadic</option>
+          <option value="analogous">Analogous</option>
+        </select>
+        <button class="btn btn-primary" onclick="genPalette()">Generate</button>
+      </div>
+      <div id="palette-result" style="display:flex;gap:0.5rem;flex-wrap:wrap"></div>
+    </div>
+  </div>
+
+  <!-- JSON FORMATTER -->
+  <div class="tool-card" id="tool-json" onclick="toggleTool('json',event)">
+    <div class="tool-icon">📋</div>
+    <div class="tool-name">JSON Formatter</div>
+    <div class="tool-desc">JSON validate aur beautify karo instantly</div>
+    <div class="tool-content" onclick="event.stopPropagation()">
+      <textarea id="json-input" placeholder='{"name":"FarPlay","type":"free"}' style="min-height:80px;margin-bottom:0.5rem;font-family:var(--mono);font-size:0.8rem"></textarea>
+      <div style="display:flex;gap:0.5rem;margin-bottom:0.5rem">
+        <button class="btn btn-primary" onclick="formatJSON()">✨ Format</button>
+        <button class="btn btn-secondary" onclick="minifyJSON()">📦 Minify</button>
+        <button class="btn btn-secondary" onclick="validateJSON()">✅ Validate</button>
+      </div>
+      <textarea id="json-output" style="min-height:80px;font-family:var(--mono);font-size:0.8rem;color:var(--accent2)" readonly></textarea>
+    </div>
+  </div>
+
+  <!-- INTERNET SPEED TEST -->
+  <div class="tool-card" id="tool-speed" onclick="toggleTool('speed',event)">
+    <div class="tool-icon">⚡</div>
+    <div class="tool-name">Internet Speed Test</div>
+    <div class="tool-desc">Apna internet speed check karo</div>
+    <div class="tool-content" onclick="event.stopPropagation()">
+      <div style="text-align:center">
+        <button class="btn btn-primary" onclick="startSpeedTest()" id="speed-btn" style="margin-bottom:1rem">▶ Speed Test Shuru Karo</button>
+        <div id="speed-result" style="display:grid;grid-template-columns:1fr 1fr;gap:0.8rem">
+          <div style="background:var(--surface2);border-radius:10px;padding:1rem">
+            <div style="font-family:var(--mono);font-size:1.5rem;color:var(--accent2)" id="speed-down">-- </div>
+            <div style="font-size:0.75rem;color:var(--text2)">Mbps Download</div>
+          </div>
+          <div style="background:var(--surface2);border-radius:10px;padding:1rem">
+            <div style="font-family:var(--mono);font-size:1.5rem;color:#a78bfa" id="speed-ping">-- </div>
+            <div style="font-size:0.75rem;color:var(--text2)">ms Ping</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- WORD COUNTER -->
+  <div class="tool-card" id="tool-word" onclick="toggleTool('word',event)">
+    <div class="tool-icon">✍️</div>
+    <div class="tool-name">Word & Character Counter</div>
+    <div class="tool-desc">Essay, article ka word count check karo</div>
+    <div class="tool-content" onclick="event.stopPropagation()">
+      <textarea id="word-input" placeholder="Yahan text paste karo..." style="min-height:100px" oninput="countWords()"></textarea>
+      <div id="word-result" style="display:grid;grid-template-columns:repeat(3,1fr);gap:0.5rem;margin-top:0.8rem">
+        <div style="background:var(--surface2);border-radius:8px;padding:0.7rem;text-align:center"><div style="font-family:var(--mono);color:var(--accent2)" id="wc-words">0</div><div style="font-size:0.72rem;color:var(--text2)">Words</div></div>
+        <div style="background:var(--surface2);border-radius:8px;padding:0.7rem;text-align:center"><div style="font-family:var(--mono);color:#a78bfa" id="wc-chars">0</div><div style="font-size:0.72rem;color:var(--text2)">Characters</div></div>
+        <div style="background:var(--surface2);border-radius:8px;padding:0.7rem;text-align:center"><div style="font-family:var(--mono);color:#f472b6" id="wc-lines">0</div><div style="font-size:0.72rem;color:var(--text2)">Lines</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PERCENTAGE CALCULATOR -->
+  <div class="tool-card" id="tool-perc" onclick="toggleTool('perc',event)">
+    <div class="tool-icon">📊</div>
+    <div class="tool-name">Percentage Calculator</div>
+    <div class="tool-desc">Discount, marks, profit percentage calculate karo</div>
+    <div class="tool-content" onclick="event.stopPropagation()">
+      <div style="display:flex;flex-direction:column;gap:0.5rem">
+        <select id="perc-type" onchange="calcPerc()">
+          <option value="of">X % of Y = ?</option>
+          <option value="what">X is what % of Y?</option>
+          <option value="change">% Change from X to Y</option>
+          <option value="discount">Discount Calculator</option>
+        </select>
+        <div style="display:flex;gap:0.5rem">
+          <input type="number" id="perc-x" placeholder="Value 1" oninput="calcPerc()">
+          <input type="number" id="perc-y" placeholder="Value 2" oninput="calcPerc()">
+        </div>
+      </div>
+      <div class="result-box" id="perc-result">Values daalo...</div>
+    </div>
+  </div>
+
+  <!-- EMI CALCULATOR -->
+  <div class="tool-card" id="tool-emi" onclick="toggleTool('emi',event)">
+    <div class="tool-icon">🏦</div>
+    <div class="tool-name">EMI Calculator</div>
+    <div class="tool-desc">Loan ki monthly EMI calculate karo</div>
+    <div class="tool-content" onclick="event.stopPropagation()">
+      <div style="display:flex;flex-direction:column;gap:0.5rem">
+        <input type="number" id="emi-principal" placeholder="Loan Amount (₹)" oninput="calcEMI()">
+        <input type="number" id="emi-rate" placeholder="Interest Rate (% per year)" oninput="calcEMI()">
+        <input type="number" id="emi-tenure" placeholder="Tenure (months)" oninput="calcEMI()">
+      </div>
+      <div class="result-box" id="emi-result">Loan details daalo...</div>
+    </div>
+  </div>
+
+  <!-- UNIT CONVERTER -->
+  <div class="tool-card" id="tool-unit" onclick="toggleTool('unit',event)">
+    <div class="tool-icon">📏</div>
+    <div class="tool-name">Unit Converter</div>
+    <div class="tool-desc">Length, Weight, Temperature convert karo</div>
+    <div class="tool-content" onclick="event.stopPropagation()">
+      <div style="display:flex;flex-direction:column;gap:0.5rem">
+        <select id="unit-cat" onchange="updateUnitOptions()">
+          <option value="length">📏 Length</option>
+          <option value="weight">⚖️ Weight</option>
+          <option value="temp">🌡️ Temperature</option>
+          <option value="area">📐 Area</option>
+        </select>
+        <div style="display:flex;gap:0.5rem">
+          <input type="number" id="unit-val" placeholder="Value" oninput="convertUnit()" style="flex:1">
+          <select id="unit-from" onchange="convertUnit()" style="flex:1"></select>
+          <select id="unit-to" onchange="convertUnit()" style="flex:1"></select>
+        </div>
+      </div>
+      <div class="result-box" id="unit-result">Value daalo...</div>
+    </div>
+  </div>
+
+</div>
+
+<!-- AD MID -->
+<div style="background:var(--surface);border:1px dashed var(--border);border-radius:10px;padding:1.5rem;text-align:center;color:var(--text2);font-size:0.82rem;margin-bottom:1.5rem">📢 [Google AdSense Rectangle Ad]</div>
+
+</div>
+
+<!-- INVOICE MODAL -->
+<div id="invoice-modal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.9);z-index:1000;overflow-y:auto;padding:2rem">
+  <div style="max-width:600px;margin:0 auto;background:#fff;color:#000;border-radius:12px;padding:2rem" id="invoice-content">
+  </div>
+  <div style="text-align:center;margin-top:1rem;display:flex;gap:1rem;justify-content:center">
+    <button class="btn btn-primary" onclick="window.print()">🖨️ Print / Save PDF</button>
+    <button class="btn btn-secondary" onclick="document.getElementById('invoice-modal').style.display='none'">✕ Close</button>
+  </div>
+</div>
+
+<footer>
+  <div style="margin-bottom:0.5rem">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="privacy.html">Privacy Policy</a>
+    <a href="terms.html">Terms</a>
+    <a href="disclaimer.html">Disclaimer</a>
+    <a href="blog.html">Blog</a>
+  </div>
+  © 2025 FarPlay — Free Online Tools India | Made with ❤️
+</footer>
+
+<script>
+// SEARCH
+function searchTools() {
+  const q = document.getElementById('search-input').value.toLowerCase();
+  document.querySelectorAll('.tool-card').forEach(card => {
+    const name = card.querySelector('.tool-name').textContent.toLowerCase();
+    const desc = card.querySelector('.tool-desc').textContent.toLowerCase();
+    card.style.display = (name.includes(q) || desc.includes(q) || q==='') ? 'block' : 'none';
+  });
+}
+
+// TOGGLE TOOL
+function toggleTool(id, e) {
+  const card = document.getElementById('tool-'+id);
+  const isOpen = card.classList.contains('open');
+  document.querySelectorAll('.tool-card').forEach(c => c.classList.remove('open'));
+  if(!isOpen) card.classList.add('open');
+}
+
+// GST CALCULATOR
+function calcGST() {
+  const amt = parseFloat(document.getElementById('gst-amount')?.value);
+  const rate = parseFloat(document.getElementById('gst-rate')?.value);
+  const type = document.getElementById('gst-type')?.value;
+  const res = document.getElementById('gst-result');
+  if(!amt || !res) { res.textContent='Amount daalo...'; return; }
+  let base, gst, total;
+  if(type==='excl') { base=amt; gst=amt*rate/100; total=amt+gst; }
+  else { total=amt; base=amt*100/(100+rate); gst=total-base; }
+  res.innerHTML = `Base Amount: ₹${base.toFixed(2)}\nGST (${rate}%): ₹${gst.toFixed(2)}\nTotal: ₹${total.toFixed(2)}\n\nCGST (${rate/2}%): ₹${(gst/2).toFixed(2)}\nSGST (${rate/2}%): ₹${(gst/2).toFixed(2)}`;
+}
+
+// UPI QR
+function genUPI() {
+  const id = document.getElementById('upi-id')?.value?.trim();
+  const name = document.getElementById('upi-name')?.value?.trim() || 'FarPlay';
+  const amount = document.getElementById('upi-amount')?.value;
+  const res = document.getElementById('upi-result');
+  if(!id || !res) return;
+  let upiStr = `upi://pay?pa=${id}&pn=${encodeURIComponent(name)}`;
+  if(amount) upiStr += `&am=${amount}&cu=INR`;
+  const qrUrl = `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(upiStr)}`;
+  res.innerHTML = `<img src="${qrUrl}" style="border-radius:8px;border:4px solid white;max-width:200px"><br><small style="color:var(--text2);margin-top:0.5rem;display:block">UPI: ${id}</small><a href="${qrUrl}" download="upi-qr.png" style="color:var(--accent2);font-size:0.82rem">⬇️ Download QR</a>`;
+}
+
+// PINCODE FINDER
+async function findPincode() {
+  const pin = document.getElementById('pin-code')?.value?.trim();
+  const res = document.getElementById('pin-result');
+  if(!pin || pin.length!==6) { res.textContent='6 digit pincode daalo!'; return; }
+  res.textContent = '⏳ Dhundh raha hai...';
+  try {
+    const r = await fetch(`https://api.postalpincode.in/pincode/${pin}`);
+    const data = await r.json();
+    if(data[0].Status==='Success') {
+      const po = data[0].PostOffice;
+      res.innerHTML = po.map(p=>`📍 ${p.Name}\n   ${p.Division}, ${p.District}\n   ${p.State} — ${p.Pincode}`).join('\n\n');
+    } else { res.textContent = '❌ Pincode nahi mila!'; }
+  } catch(e) { res.textContent = '❌ Error — internet check karo'; }
+}
+
+// YOUTUBE THUMBNAIL
+function showYTThumb() {
+  const url = document.getElementById('yt-url')?.value?.trim();
+  const res = document.getElementById('yt-result');
+  if(!url || !res) return;
+  const match = url.match(/(?:v=|youtu\.be\/)([a-zA-Z0-9_-]{11})/);
+  if(!match) { res.innerHTML='<span style="color:var(--text2)">Valid YouTube URL daalo</span>'; return; }
+  const vid = match[1];
+  res.innerHTML = `
+    <img src="https://img.youtube.com/vi/${vid}/maxresdefault.jpg" style="width:100%;border-radius:8px;margin-bottom:0.5rem" onerror="this.src='https://img.youtube.com/vi/${vid}/hqdefault.jpg'">
+    <div style="display:flex;gap:0.5rem;flex-wrap:wrap;justify-content:center">
+      <a href="https://img.youtube.com/vi/${vid}/maxresdefault.jpg" target="_blank" class="btn btn-primary" style="font-size:0.8rem;text-decoration:none">⬇️ HD Download</a>
+      <a href="https://img.youtube.com/vi/${vid}/hqdefault.jpg" target="_blank" class="btn btn-secondary" style="font-size:0.8rem;text-decoration:none">⬇️ HQ Download</a>
+    </div>`;
+}
+
+// INVOICE GENERATOR
+function generateInvoice() {
+  const from = document.getElementById('inv-from')?.value || 'FarPlay User';
+  const to = document.getElementById('inv-to')?.value || 'Client';
+  const item = document.getElementById('inv-item')?.value || 'Service';
+  const amount = parseFloat(document.getElementById('inv-amount')?.value) || 0;
+  const date = document.getElementById('inv-date')?.value || new Date().toLocaleDateString();
+  const invNo = 'INV-' + Date.now().toString().slice(-6);
+  const gst = amount * 0.18;
+  const total = amount + gst;
+  document.getElementById('invoice-content').innerHTML = `
+    <div style="display:flex;justify-content:space-between;margin-bottom:2rem">
+      <div><h1 style="color:#7c3aed;font-size:2rem;margin:0">INVOICE</h1><div style="color:#666;font-size:0.85rem">${invNo}</div></div>
+      <div style="text-align:right"><div style="font-weight:700;font-size:1.2rem">FarPlay</div><div style="color:#666;font-size:0.82rem">farplay.in</div></div>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:2rem">
+      <div><div style="font-weight:600;margin-bottom:0.3rem">From:</div><div>${from}</div></div>
+      <div><div style="font-weight:600;margin-bottom:0.3rem">To:</div><div>${to}</div></div>
+      <div><div style="font-weight:600;margin-bottom:0.3rem">Date:</div><div>${date}</div></div>
+      <div><div style="font-weight:600;margin-bottom:0.3rem">Due Date:</div><div>${date}</div></div>
+    </div>
+    <table style="width:100%;border-collapse:collapse;margin-bottom:1rem">
+      <tr style="background:#f3f4f6"><th style="padding:0.8rem;text-align:left;border:1px solid #e5e7eb">Item/Service</th><th style="padding:0.8rem;border:1px solid #e5e7eb">Amount</th></tr>
+      <tr><td style="padding:0.8rem;border:1px solid #e5e7eb">${item}</td><td style="padding:0.8rem;border:1px solid #e5e7eb;text-align:center">₹${amount.toFixed(2)}</td></tr>
+      <tr><td style="padding:0.8rem;border:1px solid #e5e7eb;color:#666">GST (18%)</td><td style="padding:0.8rem;border:1px solid #e5e7eb;text-align:center">₹${gst.toFixed(2)}</td></tr>
+      <tr style="background:#7c3aed;color:#fff"><td style="padding:0.8rem;font-weight:700">Total</td><td style="padding:0.8rem;text-align:center;font-weight:700">₹${total.toFixed(2)}</td></tr>
+    </table>
+    <div style="text-align:center;color:#666;font-size:0.82rem;margin-top:1rem">Generated by FarPlay — Free Invoice Generator</div>`;
+  document.getElementById('invoice-modal').style.display = 'block';
+}
+
+// COLOR PALETTE
+function genPalette() {
+  const base = document.getElementById('palette-base')?.value || '#7c3aed';
+  const type = document.getElementById('palette-type')?.value;
+  const res = document.getElementById('palette-result');
+  if(!res) return;
+  const r=parseInt(base.slice(1,3),16), g=parseInt(base.slice(3,5),16), b=parseInt(base.slice(5,7),16);
+  let colors = [];
+  if(type==='shades') { for(let i=1;i<=8;i++) colors.push(`rgb(${Math.round(r*i/8)},${Math.round(g*i/8)},${Math.round(b*i/8)})`); }
+  else if(type==='complementary') { colors=[base,`rgb(${255-r},${255-g},${255-b})`,`rgb(${r},${255-g},${b})`,`rgb(${255-r},${g},${255-b})`]; }
+  else { colors=[base,`hsl(${(Math.round(r*360/255)+120)%360},70%,50%)`,`hsl(${(Math.round(r*360/255)+240)%360},70%,50%)`,`hsl(${Math.round(r*360/255)},40%,70%)`]; }
+  res.innerHTML = colors.map(c=>`<div onclick="navigator.clipboard.writeText('${c}');this.title='Copied!'" title="${c}" style="width:50px;height:50px;border-radius:8px;background:${c};cursor:pointer;border:2px solid rgba(255,255,255,0.2);transition:transform 0.15s" onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.style.transform='scale(1)'"></div>`).join('');
+}
+
+// JSON FORMATTER
+function formatJSON() {
+  try { const p=JSON.parse(document.getElementById('json-input').value); document.getElementById('json-output').value=JSON.stringify(p,null,2); }
+  catch(e) { document.getElementById('json-output').value='❌ Invalid JSON: '+e.message; }
+}
+function minifyJSON() {
+  try { const p=JSON.parse(document.getElementById('json-input').value); document.getElementById('json-output').value=JSON.stringify(p); }
+  catch(e) { document.getElementById('json-output').value='❌ Invalid JSON: '+e.message; }
+}
+function validateJSON() {
+  try { JSON.parse(document.getElementById('json-input').value); document.getElementById('json-output').value='✅ Valid JSON hai!'; }
+  catch(e) { document.getElementById('json-output').value='❌ Invalid: '+e.message; }
+}
+
+// SPEED TEST
+async function startSpeedTest() {
+  const btn=document.getElementById('speed-btn');
+  const down=document.getElementById('speed-down');
+  const ping=document.getElementById('speed-ping');
+  btn.textContent='Testing...'; btn.disabled=true;
+  // Ping test
+  const t1=Date.now();
+  try { await fetch('https://www.google.com/favicon.ico?_='+Date.now(),{cache:'no-store'}); }
+  catch(e){}
+  const pingMs=Date.now()-t1;
+  if(ping) ping.textContent=pingMs+'ms';
+  // Download test
+  const startTime=Date.now();
+  try {
+    const r=await fetch('https://speed.cloudflare.com/__down?bytes=5000000',{cache:'no-store'});
+    const blob=await r.blob();
+    const duration=(Date.now()-startTime)/1000;
+    const mbps=((blob.size*8)/(duration*1000000)).toFixed(2);
+    if(down) down.textContent=mbps+' Mbps';
+  } catch(e) { if(down) down.textContent='Error'; }
+  btn.textContent='🔄 Dobara Test Karo'; btn.disabled=false;
+}
+
+// WORD COUNTER
+function countWords() {
+  const text=document.getElementById('word-input')?.value||'';
+  const words=text.trim()?text.trim().split(/\s+/).length:0;
+  const chars=text.length;
+  const lines=text?text.split('\n').length:0;
+  document.getElementById('wc-words').textContent=words;
+  document.getElementById('wc-chars').textContent=chars;
+  document.getElementById('wc-lines').textContent=lines;
+}
+
+// PERCENTAGE CALCULATOR
+function calcPerc() {
+  const x=parseFloat(document.getElementById('perc-x')?.value);
+  const y=parseFloat(document.getElementById('perc-y')?.value);
+  const type=document.getElementById('perc-type')?.value;
+  const res=document.getElementById('perc-result');
+  if(!res||isNaN(x)||isNaN(y)) { res.textContent='Values daalo...'; return; }
+  let result='';
+  if(type==='of') result=`${x}% of ${y} = ${(x*y/100).toFixed(2)}`;
+  else if(type==='what') result=`${x} is ${((x/y)*100).toFixed(2)}% of ${y}`;
+  else if(type==='change') result=`Change: ${(((y-x)/x)*100).toFixed(2)}% ${y>x?'increase':'decrease'}`;
+  else result=`Original: ₹${y}\nDiscount (${x}%): ₹${(y*x/100).toFixed(2)}\nFinal Price: ₹${(y-(y*x/100)).toFixed(2)}`;
+  res.textContent=result;
+}
+
+// EMI CALCULATOR
+function calcEMI() {
+  const p=parseFloat(document.getElementById('emi-principal')?.value);
+  const r=parseFloat(document.getElementById('emi-rate')?.value)/(12*100);
+  const n=parseInt(document.getElementById('emi-tenure')?.value);
+  const res=document.getElementById('emi-result');
+  if(!res||!p||!r||!n) { res.textContent='Details daalo...'; return; }
+  const emi=(p*r*Math.pow(1+r,n))/(Math.pow(1+r,n)-1);
+  const total=emi*n;
+  const interest=total-p;
+  res.textContent=`Monthly EMI: ₹${emi.toFixed(0)}\nTotal Payment: ₹${total.toFixed(0)}\nTotal Interest: ₹${interest.toFixed(0)}`;
+}
+
+// UNIT CONVERTER
+const UNITS = {
+  length:{m:1,km:0.001,cm:100,mm:1000,inch:39.37,foot:3.281,mile:0.000621,yard:1.094},
+  weight:{kg:1,g:1000,mg:1000000,lb:2.205,oz:35.274,tonne:0.001},
+  temp:{celsius:1},
+  area:{sqm:1,sqkm:0.000001,sqcm:10000,sqft:10.764,acre:0.000247,hectare:0.0001}
+};
+function updateUnitOptions() {
+  const cat=document.getElementById('unit-cat')?.value;
+  const keys=Object.keys(UNITS[cat]||{});
+  ['unit-from','unit-to'].forEach((id,i)=>{
+    const sel=document.getElementById(id);
+    if(sel) sel.innerHTML=keys.map(k=>`<option value="${k}">${k}</option>`).join('');
+    if(id==='unit-to'&&sel) sel.selectedIndex=1;
+  });
+  convertUnit();
+}
+function convertUnit() {
+  const cat=document.getElementById('unit-cat')?.value;
+  const val=parseFloat(document.getElementById('unit-val')?.value);
+  const from=document.getElementById('unit-from')?.value;
+  const to=document.getElementById('unit-to')?.value;
+  const res=document.getElementById('unit-result');
+  if(!res||isNaN(val)) { res.textContent='Value daalo...'; return; }
+  if(cat==='temp') {
+    let c=from==='celsius'?val:from==='fahrenheit'?(val-32)*5/9:(val-273.15);
+    const result=to==='celsius'?c:to==='fahrenheit'?c*9/5+32:c+273.15;
+    res.textContent=`${val} ${from} = ${result.toFixed(4)} ${to}`;
+  } else {
+    const inBase=val/UNITS[cat][from];
+    const result=inBase*UNITS[cat][to];
+    res.textContent=`${val} ${from} = ${result.toFixed(6)} ${to}`;
+  }
+}
+
+// INIT
+window.addEventListener('load', () => { updateUnitOptions(); setTimeout(genPalette, 500); });
+</script>
+</body>
+</html>

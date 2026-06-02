@@ -1,0 +1,1024 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — FarPlay | Free Online Tools India</title>
+<meta name="description" content="FarPlay Privacy Policy — Learn how we collect, use, and protect your information on our free online tools platform.">
+<meta name="robots" content="index, follow">
+<meta name="author" content="FarPlay">
+<meta property="og:title" content="Privacy Policy — FarPlay">
+<meta property="og:description" content="FarPlay's commitment to your privacy. Read our complete privacy policy.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://warm-chebakia-281d98.netlify.app/privacy.html">
+<link rel="canonical" href="https://warm-chebakia-281d98.netlify.app/privacy.html">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6566333205320776" crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0CGN70KXS7"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-0CGN70KXS7');</script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+<style>
+/* ===== ROOT ===== */
+:root {
+  --bg: #050508;
+  --bg2: #0a0a0f;
+  --surface: rgba(255,255,255,0.04);
+  --surface2: rgba(255,255,255,0.07);
+  --border: rgba(255,255,255,0.08);
+  --border2: rgba(255,255,255,0.12);
+  --accent: #7c3aed;
+  --accent2: #06d6a0;
+  --accent3: #f72585;
+  --text: #f0f0f8;
+  --text2: #9090b0;
+  --text3: #6060808;
+  --display: 'Syne', sans-serif;
+  --body: 'Space Grotesk', sans-serif;
+  --glow: 0 0 40px rgba(124,58,237,0.15);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--body);
+  min-height: 100vh;
+  overflow-x: hidden;
+  line-height: 1.7;
+}
+
+/* ===== ANIMATED BG ===== */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 80% 50% at 20% 20%, rgba(124,58,237,0.08) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 40% at 80% 80%, rgba(6,214,160,0.06) 0%, transparent 60%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ===== NAVBAR ===== */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(5,5,8,0.85);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border-bottom: 1px solid var(--border);
+  padding: 0 2rem;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-family: var(--display);
+  font-size: 1.5rem;
+  font-weight: 800;
+  text-decoration: none;
+  color: var(--text);
+  letter-spacing: -0.5px;
+}
+.logo span { color: var(--accent2); }
+
+.nav-links { display: flex; gap: 0.25rem; }
+.nav-link {
+  color: var(--text2);
+  text-decoration: none;
+  font-size: 0.82rem;
+  padding: 0.4rem 0.9rem;
+  border-radius: 6px;
+  transition: all 0.2s;
+  font-weight: 500;
+}
+.nav-link:hover { color: var(--text); background: var(--surface2); }
+.nav-link.active { color: var(--accent2); background: rgba(6,214,160,0.08); }
+
+/* ===== HERO HEADER ===== */
+.hero {
+  position: relative;
+  z-index: 1;
+  padding: 5rem 2rem 4rem;
+  text-align: center;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg,
+    rgba(124,58,237,0.12) 0%,
+    rgba(6,214,160,0.08) 50%,
+    rgba(247,37,133,0.06) 100%);
+  z-index: -1;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(6,214,160,0.1);
+  border: 1px solid rgba(6,214,160,0.25);
+  color: var(--accent2);
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  margin-bottom: 1.5rem;
+}
+
+.hero h1 {
+  font-family: var(--display);
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -2px;
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, #fff 0%, var(--accent2) 50%, var(--accent) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero p {
+  color: var(--text2);
+  font-size: 1.05rem;
+  max-width: 550px;
+  margin: 0 auto 2rem;
+}
+
+.last-updated {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--text2);
+  padding: 0.5rem 1.2rem;
+  border-radius: 8px;
+  font-size: 0.82rem;
+  font-family: 'Space Mono', monospace;
+}
+.last-updated .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--accent2); animation: pulse 2s infinite; }
+@keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.5;transform:scale(0.8)} }
+
+/* ===== TABLE OF CONTENTS ===== */
+.toc-wrapper {
+  position: relative;
+  z-index: 1;
+  max-width: 900px;
+  margin: 0 auto 3rem;
+  padding: 0 2rem;
+}
+
+.toc-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 1.5rem 2rem;
+  backdrop-filter: blur(10px);
+}
+
+.toc-title {
+  font-weight: 700;
+  color: var(--accent2);
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.toc-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 0.4rem;
+}
+
+.toc-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text2);
+  text-decoration: none;
+  font-size: 0.82rem;
+  padding: 0.4rem 0.6rem;
+  border-radius: 6px;
+  transition: all 0.2s;
+}
+.toc-item:hover { color: var(--accent2); background: rgba(6,214,160,0.08); }
+.toc-num {
+  min-width: 22px;
+  height: 22px;
+  background: rgba(124,58,237,0.2);
+  color: #a78bfa;
+  border-radius: 4px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ===== CONTENT ===== */
+.content {
+  position: relative;
+  z-index: 1;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 2rem 4rem;
+}
+
+/* ===== SECTION CARDS ===== */
+.section-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 2rem 2.5rem;
+  margin-bottom: 1.5rem;
+  backdrop-filter: blur(10px);
+  transition: border-color 0.3s;
+  scroll-margin-top: 80px;
+}
+.section-card:hover { border-color: var(--border2); }
+
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.section-icon {
+  width: 46px;
+  height: 46px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  flex-shrink: 0;
+}
+.icon-purple { background: rgba(124,58,237,0.15); }
+.icon-green { background: rgba(6,214,160,0.12); }
+.icon-pink { background: rgba(247,37,133,0.12); }
+.icon-blue { background: rgba(96,165,250,0.12); }
+.icon-orange { background: rgba(251,191,36,0.12); }
+.icon-red { background: rgba(239,68,68,0.12); }
+
+.section-title-text {
+  font-family: var(--display);
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.section-num {
+  font-size: 0.75rem;
+  color: var(--text2);
+  font-weight: 400;
+  display: block;
+  margin-top: 0.1rem;
+}
+
+/* ===== TYPOGRAPHY ===== */
+.section-card p {
+  color: var(--text2);
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+  line-height: 1.8;
+}
+.section-card p:last-child { margin-bottom: 0; }
+
+.sub-heading {
+  color: var(--text);
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin: 1.2rem 0 0.6rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.sub-heading::before {
+  content: '';
+  width: 3px;
+  height: 16px;
+  background: var(--accent2);
+  border-radius: 2px;
+}
+
+.list-items {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-bottom: 1rem;
+}
+.list-items li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.7rem;
+  color: var(--text2);
+  font-size: 0.9rem;
+  padding: 0.4rem 0;
+}
+.list-items li::before {
+  content: '▸';
+  color: var(--accent2);
+  font-size: 0.75rem;
+  margin-top: 0.25rem;
+  flex-shrink: 0;
+}
+
+/* ===== HIGHLIGHT BOX ===== */
+.highlight-box {
+  background: rgba(6,214,160,0.06);
+  border: 1px solid rgba(6,214,160,0.2);
+  border-radius: 12px;
+  padding: 1.2rem 1.5rem;
+  margin: 1rem 0;
+}
+.highlight-box.purple {
+  background: rgba(124,58,237,0.06);
+  border-color: rgba(124,58,237,0.2);
+}
+.highlight-box.pink {
+  background: rgba(247,37,133,0.06);
+  border-color: rgba(247,37,133,0.2);
+}
+.highlight-box p {
+  color: var(--text) !important;
+  margin: 0 !important;
+  font-size: 0.9rem !important;
+}
+.highlight-box strong { color: var(--accent2); }
+.highlight-box.purple strong { color: #a78bfa; }
+.highlight-box.pink strong { color: #f472b6; }
+
+/* ===== INFO GRID ===== */
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 0.8rem;
+  margin: 1rem 0;
+}
+.info-box {
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1rem;
+  text-align: center;
+}
+.info-box .icon { font-size: 1.5rem; margin-bottom: 0.4rem; }
+.info-box .label { font-size: 0.78rem; color: var(--text2); margin-bottom: 0.2rem; }
+.info-box .value { font-size: 0.88rem; font-weight: 600; color: var(--accent2); }
+
+/* ===== IMPORTANT NOTICE ===== */
+.notice {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  background: rgba(247,37,133,0.06);
+  border: 1px solid rgba(247,37,133,0.2);
+  border-radius: 12px;
+  padding: 1rem 1.2rem;
+  margin: 1rem 0;
+}
+.notice-icon { font-size: 1.2rem; flex-shrink: 0; margin-top: 0.1rem; }
+.notice p { color: var(--text2) !important; margin: 0 !important; font-size: 0.88rem !important; }
+
+/* ===== DIVIDER ===== */
+.divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--border2), transparent);
+  margin: 1.5rem 0;
+}
+
+/* ===== CONTACT CARD ===== */
+.contact-card {
+  background: linear-gradient(135deg, rgba(124,58,237,0.1), rgba(6,214,160,0.08));
+  border: 1px solid rgba(124,58,237,0.25);
+  border-radius: 16px;
+  padding: 2rem;
+  text-align: center;
+  margin-top: 1.5rem;
+}
+.contact-email {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(6,214,160,0.12);
+  border: 1px solid rgba(6,214,160,0.3);
+  color: var(--accent2);
+  padding: 0.6rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  margin-top: 0.8rem;
+  font-size: 0.95rem;
+  transition: all 0.2s;
+}
+.contact-email:hover {
+  background: rgba(6,214,160,0.2);
+  transform: translateY(-1px);
+}
+
+/* ===== FOOTER ===== */
+footer {
+  position: relative;
+  z-index: 1;
+  border-top: 1px solid var(--border);
+  padding: 2.5rem 2rem;
+  text-align: center;
+}
+.footer-logo {
+  font-family: var(--display);
+  font-size: 1.3rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+.footer-logo span { color: var(--accent2); }
+.footer-links {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+.footer-links a {
+  color: var(--text2);
+  text-decoration: none;
+  font-size: 0.82rem;
+  padding: 0.3rem 0.8rem;
+  border-radius: 6px;
+  transition: color 0.2s;
+}
+.footer-links a:hover { color: var(--accent2); }
+.footer-copy { color: var(--text2); font-size: 0.78rem; }
+
+/* ===== SCROLL TOP ===== */
+.scroll-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 44px;
+  height: 44px;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  transition: all 0.2s;
+  box-shadow: 0 4px 20px rgba(124,58,237,0.3);
+}
+.scroll-top:hover { transform: translateY(-2px); }
+.scroll-top.show { display: flex; }
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .section-card { padding: 1.5rem; }
+  .hero { padding: 3rem 1.5rem 2.5rem; }
+  .toc-grid { grid-template-columns: 1fr 1fr; }
+  .nav-links { display: none; }
+  .content { padding: 0 1rem 3rem; }
+  .toc-wrapper { padding: 0 1rem; }
+}
+@media (max-width: 480px) {
+  .toc-grid { grid-template-columns: 1fr; }
+  .info-grid { grid-template-columns: 1fr 1fr; }
+  .section-title-text { font-size: 1.1rem; }
+}
+
+/* ===== SMOOTH SCROLL PROGRESS ===== */
+.progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--accent), var(--accent2));
+  z-index: 9999;
+  transition: width 0.1s;
+}
+</style>
+</head>
+<body>
+
+<!-- SCROLL PROGRESS -->
+<div class="progress-bar" id="progress-bar"></div>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="logo">Far<span>Play</span></a>
+  <div class="nav-links">
+    <a href="index.html" class="nav-link">🏠 Home</a>
+    <a href="tools.html" class="nav-link">🛠️ Tools</a>
+    <a href="blog.html" class="nav-link">📝 Blog</a>
+    <a href="about.html" class="nav-link">ℹ️ About</a>
+    <a href="contact.html" class="nav-link">📬 Contact</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-badge">🔒 Legal Document</div>
+  <h1>Privacy Policy</h1>
+  <p>Your privacy matters to us. This policy explains how FarPlay collects, uses, and protects your information.</p>
+  <div class="last-updated">
+    <div class="dot"></div>
+    Last Updated: June 1, 2025
+  </div>
+</div>
+
+<!-- TABLE OF CONTENTS -->
+<div class="toc-wrapper">
+  <div class="toc-card">
+    <div class="toc-title">📋 Table of Contents</div>
+    <div class="toc-grid">
+      <a href="#s1" class="toc-item"><span class="toc-num">01</span> Introduction</a>
+      <a href="#s2" class="toc-item"><span class="toc-num">02</span> Information We Collect</a>
+      <a href="#s3" class="toc-item"><span class="toc-num">03</span> How We Use Information</a>
+      <a href="#s4" class="toc-item"><span class="toc-num">04</span> Google AdSense & Ads</a>
+      <a href="#s5" class="toc-item"><span class="toc-num">05</span> Analytics Services</a>
+      <a href="#s6" class="toc-item"><span class="toc-num">06</span> Data Storage</a>
+      <a href="#s7" class="toc-item"><span class="toc-num">07</span> Data Security</a>
+      <a href="#s8" class="toc-item"><span class="toc-num">08</span> Sharing of Information</a>
+      <a href="#s9" class="toc-item"><span class="toc-num">09</span> User Rights</a>
+      <a href="#s10" class="toc-item"><span class="toc-num">10</span> Children's Privacy</a>
+      <a href="#s11" class="toc-item"><span class="toc-num">11</span> Third-Party Links</a>
+      <a href="#s12" class="toc-item"><span class="toc-num">12</span> International Users</a>
+      <a href="#s13" class="toc-item"><span class="toc-num">13</span> Policy Changes</a>
+      <a href="#s14" class="toc-item"><span class="toc-num">14</span> Contact Us</a>
+      <a href="#s15" class="toc-item"><span class="toc-num">15</span> Legal Disclaimer</a>
+    </div>
+  </div>
+</div>
+
+<!-- CONTENT -->
+<div class="content">
+
+  <!-- S1: INTRODUCTION -->
+  <div class="section-card" id="s1">
+    <div class="section-header">
+      <div class="section-icon icon-green">👋</div>
+      <div>
+        <div class="section-title-text">Introduction</div>
+        <span class="section-num">Section 01</span>
+      </div>
+    </div>
+    <p>Welcome to <strong style="color:var(--text)">FarPlay</strong> ("we," "our," or "us"). FarPlay is a free online platform available at <strong style="color:var(--accent2)">warm-chebakia-281d98.netlify.app</strong> that provides a wide range of tools and services including an HTML/CSS/JavaScript Code Editor, project saving features, Daily AI Prompts, Mini Apps, Productivity Tools, and future AI-powered utilities.</p>
+    <p>We are committed to protecting your privacy and handling your personal information with transparency, care, and respect. This Privacy Policy explains what information we collect, how we use it, and your rights regarding your data.</p>
+    <div class="highlight-box">
+      <p><strong>By using FarPlay, you agree to the collection and use of information in accordance with this Privacy Policy.</strong> If you do not agree with this policy, please discontinue use of our services.</p>
+    </div>
+    <p>This policy applies to all users of FarPlay and covers all features, tools, pages, and services provided by us, both currently and in the future.</p>
+  </div>
+
+  <!-- S2: INFORMATION WE COLLECT -->
+  <div class="section-card" id="s2">
+    <div class="section-header">
+      <div class="section-icon icon-purple">📊</div>
+      <div>
+        <div class="section-title-text">Information We Collect</div>
+        <span class="section-num">Section 02</span>
+      </div>
+    </div>
+    <p>FarPlay collects various types of information to provide, improve, and personalize our services. Here is a detailed breakdown of what we collect:</p>
+
+    <div class="sub-heading">A. Information Users Provide Directly</div>
+    <ul class="list-items">
+      <li>Project names and titles you create in the Code Editor</li>
+      <li>Saved code (HTML, CSS, JavaScript, Python) stored locally in your browser</li>
+      <li>Feedback and suggestions submitted through our platform</li>
+      <li>Name and email address provided via the Contact form</li>
+      <li>Messages and inquiries sent to our support team</li>
+      <li>Future account registration details (name, email, password) when account features become available</li>
+      <li>User preferences and settings stored locally on your device</li>
+    </ul>
+
+    <div class="sub-heading">B. Automatically Collected Information</div>
+    <p>When you visit FarPlay, certain information is automatically collected by our servers and third-party services:</p>
+    <div class="info-grid">
+      <div class="info-box"><div class="icon">🌐</div><div class="label">IP Address</div><div class="value">Collected</div></div>
+      <div class="info-box"><div class="icon">🖥️</div><div class="label">Browser Type</div><div class="value">Collected</div></div>
+      <div class="info-box"><div class="icon">📱</div><div class="label">Device Info</div><div class="value">Collected</div></div>
+      <div class="info-box"><div class="icon">⚙️</div><div class="label">Operating System</div><div class="value">Collected</div></div>
+      <div class="info-box"><div class="icon">📄</div><div class="label">Pages Visited</div><div class="value">Tracked</div></div>
+      <div class="info-box"><div class="icon">⏱️</div><div class="label">Time on Page</div><div class="value">Tracked</div></div>
+    </div>
+    <ul class="list-items">
+      <li>Referring websites and how you found FarPlay</li>
+      <li>Clickstream data and navigation patterns</li>
+      <li>Screen resolution and display settings</li>
+      <li>Language preferences of your browser</li>
+      <li>General geographic location (country/city level, not precise location)</li>
+    </ul>
+
+    <div class="sub-heading">C. Cookies and Similar Technologies</div>
+    <p>FarPlay and our third-party partners use cookies and similar technologies to enhance your experience:</p>
+    <ul class="list-items">
+      <li><strong style="color:var(--text)">Session Cookies:</strong> Temporary cookies that expire when you close your browser, used to maintain your session state</li>
+      <li><strong style="color:var(--text)">Preference Cookies:</strong> Store your settings and preferences for a personalized experience</li>
+      <li><strong style="color:var(--text)">Analytics Cookies:</strong> Used by Google Analytics to understand how visitors use our website (anonymized data)</li>
+      <li><strong style="color:var(--text)">Advertising Cookies:</strong> Used by Google AdSense to display relevant advertisements based on your browsing behavior</li>
+      <li><strong style="color:var(--text)">Local Storage:</strong> Your browser's local storage is used to save code projects and user preferences locally on your device</li>
+    </ul>
+    <p>You can control or disable cookies through your browser settings at any time. Note that disabling certain cookies may affect the functionality of FarPlay.</p>
+  </div>
+
+  <!-- S3: HOW WE USE -->
+  <div class="section-card" id="s3">
+    <div class="section-header">
+      <div class="section-icon icon-blue">⚙️</div>
+      <div>
+        <div class="section-title-text">How We Use Your Information</div>
+        <span class="section-num">Section 03</span>
+      </div>
+    </div>
+    <p>The information we collect is used for the following purposes:</p>
+    <ul class="list-items">
+      <li><strong style="color:var(--text)">Service Delivery:</strong> To provide, operate, and maintain FarPlay's tools, code editor, mini apps, and all platform features</li>
+      <li><strong style="color:var(--text)">Project Management:</strong> To enable saving, loading, and managing your code projects within your browser's local storage</li>
+      <li><strong style="color:var(--text)">Performance Improvement:</strong> To analyze usage patterns and optimize the speed, reliability, and user experience of our platform</li>
+      <li><strong style="color:var(--text)">Traffic Analysis:</strong> To understand how users discover and navigate FarPlay, helping us make data-driven improvements</li>
+      <li><strong style="color:var(--text)">Security:</strong> To detect, investigate, and prevent fraudulent activity, abuse, and security threats to our platform</li>
+      <li><strong style="color:var(--text)">Feature Development:</strong> To develop, test, and launch new tools, features, and improvements based on user behavior and feedback</li>
+      <li><strong style="color:var(--text)">Personalization:</strong> To customize and personalize your experience on FarPlay based on your preferences and usage patterns</li>
+      <li><strong style="color:var(--text)">Advertising:</strong> To display relevant advertisements through Google AdSense to keep FarPlay free for all users</li>
+      <li><strong style="color:var(--text)">Communication:</strong> To respond to your support requests, feedback, and inquiries submitted through our Contact form</li>
+      <li><strong style="color:var(--text)">Legal Compliance:</strong> To comply with applicable laws, regulations, and legal obligations</li>
+    </ul>
+    <div class="highlight-box purple">
+      <p><strong>We do not use your information for any purpose not described in this Privacy Policy without your explicit consent.</strong></p>
+    </div>
+  </div>
+
+  <!-- S4: ADSENSE -->
+  <div class="section-card" id="s4">
+    <div class="section-header">
+      <div class="section-icon icon-orange">📢</div>
+      <div>
+        <div class="section-title-text">Google AdSense & Advertising</div>
+        <span class="section-num">Section 04</span>
+      </div>
+    </div>
+    <p>FarPlay uses Google AdSense, a third-party advertising service provided by Google LLC, to display advertisements on our platform. This helps us keep FarPlay completely free for all users.</p>
+
+    <div class="sub-heading">How Google AdSense Works</div>
+    <ul class="list-items">
+      <li>Google AdSense may display advertisements on FarPlay based on your browsing history and interests</li>
+      <li>Google and its partners use cookies (including the DoubleClick cookie) to serve ads based on your prior visits to FarPlay and other websites on the internet</li>
+      <li>Advertisements may be personalized based on your location, device, browsing behavior, and demographic information</li>
+      <li>Google may use data about your visits to FarPlay and other websites to show you ads for products and services that may interest you</li>
+    </ul>
+
+    <div class="sub-heading">Managing Ad Preferences</div>
+    <ul class="list-items">
+      <li>You can opt out of personalized advertising by visiting <strong style="color:var(--accent2)">Google Ads Settings</strong> at https://www.google.com/settings/ads</li>
+      <li>You can opt out of third-party vendor use of cookies by visiting the <strong style="color:var(--accent2)">Network Advertising Initiative opt-out page</strong></li>
+      <li>You can disable ad personalization through your browser's cookie settings</li>
+      <li>Disabling personalized ads does not remove ads from FarPlay — it makes ads less relevant to you</li>
+    </ul>
+
+    <div class="highlight-box">
+      <p><strong>Note:</strong> Third-party advertising partners have their own privacy policies governing their use of your information. We encourage you to review Google's Privacy Policy at policies.google.com/privacy for more details about how Google handles data in connection with AdSense.</p>
+    </div>
+
+    <div class="notice">
+      <div class="notice-icon">⚠️</div>
+      <p>FarPlay does not have access to or control over the cookies that are placed by third-party advertisers. The collection and use of information by Google and other advertising partners is governed by their respective privacy policies.</p>
+    </div>
+  </div>
+
+  <!-- S5: ANALYTICS -->
+  <div class="section-card" id="s5">
+    <div class="section-header">
+      <div class="section-icon icon-green">📈</div>
+      <div>
+        <div class="section-title-text">Analytics Services</div>
+        <span class="section-num">Section 05</span>
+      </div>
+    </div>
+    <p>FarPlay uses Google Analytics (a web analytics service by Google LLC) to help us understand how visitors use our platform. This information helps us improve FarPlay's features, performance, and user experience.</p>
+
+    <div class="sub-heading">What Analytics Collects</div>
+    <ul class="list-items">
+      <li>Number of visitors and pageviews per day, week, and month</li>
+      <li>Which pages and tools are most popular on FarPlay</li>
+      <li>How long users spend on different sections of the platform</li>
+      <li>What devices, browsers, and operating systems users prefer</li>
+      <li>General geographic location (country and city level only)</li>
+      <li>Traffic sources — how users discover FarPlay (search, direct, referral)</li>
+      <li>User flow — how users navigate through different sections of FarPlay</li>
+    </ul>
+
+    <div class="highlight-box">
+      <p><strong>Important:</strong> Analytics data is generally aggregated and anonymized. We cannot identify individual users from analytics data. Google Analytics uses IP anonymization on FarPlay, which means your full IP address is never stored.</p>
+    </div>
+
+    <div class="sub-heading">Opting Out of Analytics</div>
+    <p>You can prevent Google Analytics from collecting data about your visits by installing the <strong style="color:var(--accent2)">Google Analytics Opt-out Browser Add-on</strong> available at tools.google.com/dlpage/gaoptout.</p>
+  </div>
+
+  <!-- S6: DATA STORAGE -->
+  <div class="section-card" id="s6">
+    <div class="section-header">
+      <div class="section-icon icon-purple">💾</div>
+      <div>
+        <div class="section-title-text">Data Storage</div>
+        <span class="section-num">Section 06</span>
+      </div>
+    </div>
+    <p>FarPlay takes a privacy-first approach to data storage, keeping as much data as possible on your own device rather than on remote servers.</p>
+
+    <div class="sub-heading">Local Browser Storage (Current)</div>
+    <ul class="list-items">
+      <li>Code projects, project names, and saved files are stored entirely in your browser's <strong style="color:var(--text)">localStorage</strong> — on your device only</li>
+      <li>User preferences and settings are stored locally in your browser</li>
+      <li>This means your data stays on your device and is not transmitted to our servers</li>
+      <li>Clearing your browser data or localStorage will permanently delete your saved projects</li>
+      <li>Data stored in localStorage is not accessible to us or any third party</li>
+    </ul>
+
+    <div class="sub-heading">Future Cloud Storage (Planned)</div>
+    <ul class="list-items">
+      <li>Future account features may offer optional cloud storage for your projects and preferences</li>
+      <li>Cloud storage will be encrypted and stored on secure servers</li>
+      <li>Users will always have the option to export and delete their cloud-stored data</li>
+      <li>We will provide clear notice and obtain consent before implementing cloud storage features</li>
+    </ul>
+
+    <div class="sub-heading">Data Retention</div>
+    <ul class="list-items">
+      <li>Analytics data is retained by Google Analytics for 26 months by default</li>
+      <li>Contact form submissions may be retained for up to 12 months to track resolution</li>
+      <li>Local browser data is retained indefinitely until you clear it manually</li>
+    </ul>
+  </div>
+
+  <!-- S7: SECURITY -->
+  <div class="section-card" id="s7">
+    <div class="section-header">
+      <div class="section-icon icon-blue">🛡️</div>
+      <div>
+        <div class="section-title-text">Data Security</div>
+        <span class="section-num">Section 07</span>
+      </div>
+    </div>
+    <p>The security of your data is important to us. FarPlay implements reasonable technical and organizational measures to protect your information from unauthorized access, alteration, disclosure, or destruction.</p>
+
+    <div class="sub-heading">Security Measures We Use</div>
+    <ul class="list-items">
+      <li><strong style="color:var(--text)">HTTPS Encryption:</strong> All data transmitted between your browser and FarPlay is encrypted using HTTPS/TLS protocols</li>
+      <li><strong style="color:var(--text)">Secure Hosting:</strong> FarPlay is hosted on Netlify, which provides enterprise-grade security infrastructure</li>
+      <li><strong style="color:var(--text)">Minimal Data Collection:</strong> We follow a data minimization principle — we only collect what is necessary</li>
+      <li><strong style="color:var(--text)">Local-First Storage:</strong> User projects are stored locally, reducing exposure of personal data to server-side risks</li>
+      <li><strong style="color:var(--text)">Regular Reviews:</strong> We periodically review our security practices and update them as needed</li>
+    </ul>
+
+    <div class="notice">
+      <div class="notice-icon">⚠️</div>
+      <p><strong style="color:var(--text)">Important Limitation:</strong> No method of transmission over the internet or electronic storage is 100% secure. While we strive to use commercially acceptable means to protect your information, we cannot guarantee its absolute security. We encourage you to use strong passwords, keep your browser updated, and avoid using FarPlay on unsecured public networks for sensitive work.</p>
+    </div>
+  </div>
+
+  <!-- S8: SHARING -->
+  <div class="section-card" id="s8">
+    <div class="section-header">
+      <div class="section-icon icon-red">🤝</div>
+      <div>
+        <div class="section-title-text">Sharing of Information</div>
+        <span class="section-num">Section 08</span>
+      </div>
+    </div>
+    <div class="highlight-box pink">
+      <p><strong>We do not sell, trade, rent, or otherwise transfer your personal information to third parties for their marketing purposes. Ever.</strong></p>
+    </div>
+
+    <p>Your information may only be shared in the following limited circumstances:</p>
+
+    <div class="sub-heading">Legal Obligations</div>
+    <p>We may disclose your information when required to do so by law, court order, or governmental authority, or when we believe in good faith that disclosure is necessary to comply with applicable laws or legal processes.</p>
+
+    <div class="sub-heading">Protection of Rights and Safety</div>
+    <p>We may share information when necessary to protect the rights, property, or safety of FarPlay, our users, or the public — including to investigate potential violations of our Terms of Service or detect fraud and security threats.</p>
+
+    <div class="sub-heading">Trusted Service Providers</div>
+    <ul class="list-items">
+      <li><strong style="color:var(--text)">Google LLC</strong> — for analytics (Google Analytics) and advertising (Google AdSense) services</li>
+      <li><strong style="color:var(--text)">Netlify Inc.</strong> — our hosting provider, who may have access to server logs</li>
+      <li>Any future service providers will be bound by confidentiality agreements and prohibited from using your data for their own purposes</li>
+    </ul>
+
+    <div class="sub-heading">Business Transfers</div>
+    <p>In the event of a merger, acquisition, reorganization, or sale of assets, your information may be transferred as part of that transaction. We will provide notice before your information is transferred and becomes subject to a different privacy policy.</p>
+  </div>
+
+  <!-- S9: USER RIGHTS -->
+  <div class="section-card" id="s9">
+    <div class="section-header">
+      <div class="section-icon icon-green">⚖️</div>
+      <div>
+        <div class="section-title-text">Your Rights</div>
+        <span class="section-num">Section 09</span>
+      </div>
+    </div>
+    <p>As a user of FarPlay, you have the following rights regarding your personal information:</p>
+    <ul class="list-items">
+      <li><strong style="color:var(--text)">Right to Access:</strong> You may request information about what personal data we hold about you. Contact us at support@farplay.app for access requests.</li>
+      <li><strong style="color:var(--text)">Right to Correction:</strong> You may request that we correct any inaccurate personal information we hold about you.</li>
+      <li><strong style="color:var(--text)">Right to Deletion:</strong> You may request that we delete your personal information from our records. Note that locally stored data can be deleted by clearing your browser's localStorage.</li>
+      <li><strong style="color:var(--text)">Right to Manage Cookies:</strong> You can disable or manage cookies through your browser settings at any time. Each browser has different settings — consult your browser's help documentation for guidance.</li>
+      <li><strong style="color:var(--text)">Right to Opt Out of Analytics:</strong> You can install the Google Analytics opt-out browser extension to prevent data collection.</li>
+      <li><strong style="color:var(--text)">Right to Opt Out of Personalized Ads:</strong> You can manage your ad preferences through Google's Ad Settings.</li>
+      <li><strong style="color:var(--text)">Right to Stop Using Services:</strong> You may stop using FarPlay at any time. Clearing your browser data will remove all locally stored information associated with your use of FarPlay.</li>
+    </ul>
+    <p>To exercise any of these rights, please contact us at <strong style="color:var(--accent2)">support@farplay.app</strong>. We will respond to your request within a reasonable timeframe.</p>
+  </div>
+
+  <!-- S10: CHILDREN -->
+  <div class="section-card" id="s10">
+    <div class="section-header">
+      <div class="section-icon icon-orange">👶</div>
+      <div>
+        <div class="section-title-text">Children's Privacy</div>
+        <span class="section-num">Section 10</span>
+      </div>
+    </div>
+    <p>FarPlay's services are <strong style="color:var(--text)">not directed to children under the age of 13</strong> (or the applicable age of digital consent in your jurisdiction).</p>
+    <ul class="list-items">
+      <li>We do not knowingly collect personal information from children under 13 years of age</li>
+      <li>Our platform does not intentionally target or market to children under 13</li>
+      <li>If you are under 13, please do not use FarPlay or provide any personal information to us</li>
+      <li>If we become aware that we have inadvertently collected personal information from a child under 13, we will take prompt steps to delete such information from our records</li>
+    </ul>
+    <div class="highlight-box pink">
+      <p><strong>Parents and Guardians:</strong> If you believe that your child under 13 has provided personal information to FarPlay, please contact us immediately at support@farplay.app and we will take steps to remove that information and terminate the child's use of our services.</p>
+    </div>
+  </div>
+
+  <!-- S11: THIRD PARTY LINKS -->
+  <div class="section-card" id="s11">
+    <div class="section-header">
+      <div class="section-icon icon-purple">🔗</div>
+      <div>
+        <div class="section-title-text">Third-Party Links</div>
+        <span class="section-num">Section 11</span>
+      </div>
+    </div>
+    <p>FarPlay may contain links to external websites, services, or resources that are not operated by us. These may include:</p>
+    <ul class="list-items">
+      <li>Links in our blog articles to external references and sources</li>
+      <li>Links to third-party tools, APIs, or documentation</li>
+      <li>Advertisements displayed by Google AdSense that link to advertiser websites</li>
+      <li>Social media links and sharing buttons</li>
+    </ul>
+    <div class="notice">
+      <div class="notice-icon">⚠️</div>
+      <p>We have <strong style="color:var(--text)">no control over</strong> the content, privacy practices, or policies of third-party websites. We strongly advise you to review the Privacy Policy of every website you visit. We are not responsible for the privacy practices or content of any external sites.</p>
+    </div>
+    <p>The inclusion of any link does not imply our endorsement of the linked site or its content.</p>
+  </div>
+
+  <!-- S12: INTERNATIONAL -->
+  <div class="section-card" id="s12">
+    <div class="section-header">
+      <div class="section-icon icon-blue">🌍</div>
+      <div>
+        <div class="section-title-text">International Users</div>
+        <span class="section-num">Section 12</span>
+      </div>
+    </div>
+    <p>FarPlay is operated from India and is primarily designed for Indian users. However, we welcome visitors from all around the world.</p>
+    <ul class="list-items">
+      <li>Your information may be processed and stored in countries where our servers and service providers (such as Google and Netlify) operate, including the United States</li>
+      <li>These countries may have different data protection laws than your country of residence</li>
+      <li>By using FarPlay, you consent to the transfer and processing of your information in these locations</li>
+      <li>We take appropriate measures to ensure your data is treated securely regardless of where it is processed</li>
+    </ul>
+    <p>If you are accessing FarPlay from the European Economic Area (EEA), you may have additional rights under GDPR. Please contact us at support@farplay.app to exercise these rights.</p>
+  </div>
+
+  <!-- S13: CHANGES -->
+  <div class="section-card" id="s13">
+    <div class="section-header">
+      <div class="section-icon icon-green">🔄</div>
+      <div>
+        <div class="section-title-text">Changes to This Privacy Policy</div>
+        <span class="section-num">Section 13</span>
+      </div>
+    </div>
+    <p>We may update this Privacy Policy from time to time to reflect changes in our practices, technology, legal requirements, or other factors.</p>
+    <ul class="list-items">
+      <li>When we make significant changes, we will update the <strong style="color:var(--text)">"Last Updated"</strong> date shown at the top of this page</li>
+      <li>We encourage you to review this Privacy Policy periodically to stay informed about how we protect your information</li>
+      <li>Your continued use of FarPlay after any changes to this Privacy Policy constitutes your acceptance of the updated policy</li>
+      <li>For material changes that significantly affect your rights, we will make reasonable efforts to provide notice (such as a prominent notice on our homepage)</li>
+    </ul>
+    <div class="highlight-box">
+      <p><strong>Current Version:</strong> This Privacy Policy was last updated on <strong>June 1, 2025</strong>. Previous versions are available upon request.</p>
+    </div>
+  </div>
+
+  <!-- S14: CONTACT -->
+  <div class="section-card" id="s14">
+    <div class="section-header">
+      <div class="section-icon icon-green">📬</div>
+      <div>
+        <div class="section-title-text">Contact Us</div>
+        <span class="section-num">Section 14</span>
+      </div>
+    </div>
+    <p>If you have any questions, concerns, or requests regarding this Privacy Policy or our privacy practices, please do not hesitate to contact us.</p>
+    <div class="contact-card">
+      <div style="font-size:2rem;margin-bottom:0.5rem">🔒</div>
+      <div style="font-family:var(--display);font-size:1.2rem;font-weight:700;margin-bottom:0.3rem">FarPlay Privacy Team</div>
+      <div style="color:var(--text2);font-size:0.85rem;margin-bottom:1rem">We respond to all privacy inquiries within 48 hours</div>
+      <a href="mailto:support@farplay.app" class="contact-email">📧 support@farplay.app</a>
+      <div style="margin-top:1.2rem;display:flex;gap:1rem;justify-content:center;flex-wrap:wrap">
+        <div style="text-align:center"><div style="font-size:0.78rem;color:var(--text2)">Response Time</div><div style="color:var(--accent2);font-weight:600;font-size:0.9rem">24–48 Hours</div></div>
+        <div style="text-align:center"><div style="font-size:0.78rem;color:var(--text2)">Platform</div><div style="color:var(--accent2);font-weight:600;font-size:0.9rem">FarPlay</div></div>
+        <div style="text-align:center"><div style="font-size:0.78rem;color:var(--text2)">Location</div><div style="color:var(--accent2);font-weight:600;font-size:0.9rem">India 🇮🇳</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- S15: LEGAL DISCLAIMER -->
+  <div class="section-card" id="s15">
+    <div class="section-header">
+      <div class="section-icon icon-red">⚖️</div>
+      <div>
+        <div class="section-title-text">Legal Disclaimer</div>
+        <span class="section-num">Section 15</span>
+      </div>
+    </div>
+    <div class="highlight-box pink">
+      <p><strong>By using FarPlay, you acknowledge that you have read, understood, and agree to be bound by this Privacy Policy.</strong> Use of FarPlay constitutes your full acceptance of this Privacy Policy and all its terms.</p>
+    </div>
+    <p>This Privacy Policy constitutes a legally binding agreement between you and FarPlay regarding the collection, processing, and use of your personal information.</p>
+    <ul class="list-items">
+      <li>This policy is governed by and construed in accordance with the laws of India</li>
+      <li>Any disputes arising from this Privacy Policy shall be subject to the jurisdiction of courts in India</li>
+      <li>If any provision of this Privacy Policy is found to be unenforceable, the remaining provisions will continue in full force and effect</li>
+      <li>Our failure to enforce any right or provision of this Privacy Policy shall not be deemed a waiver of such right or provision</li>
+      <li>This Privacy Policy represents the entire agreement between you and FarPlay regarding privacy matters</li>
+    </ul>
+    <div class="divider"></div>
+    <p style="font-size:0.85rem;color:var(--text2);text-align:center">This Privacy Policy was last reviewed and updated on <strong style="color:var(--text)">June 1, 2025</strong>. FarPlay reserves the right to modify this policy at any time. Continued use of our services after modifications constitutes acceptance of the updated policy.</p>
+  </div>
+
+</div><!-- /content -->
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">Far<span>Play</span></div>
+  <div class="footer-links">
+    <a href="index.html">🏠 Home</a>
+    <a href="tools.html">🛠️ Tools</a>
+    <a href="blog.html">📝 Blog</a>
+    <a href="about.html">ℹ️ About</a>
+    <a href="contact.html">📬 Contact</a>
+    <a href="terms.html">📜 Terms</a>
+    <a href="disclaimer.html">⚠️ Disclaimer</a>
+  </div>
+  <div class="footer-copy">© 2025 FarPlay — Free Online Tools Platform | Made with ❤️ in India 🇮🇳</div>
+</footer>
+
+<!-- SCROLL TO TOP -->
+<button class="scroll-top" id="scroll-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<script>
+// SCROLL PROGRESS BAR
+window.addEventListener('scroll', () => {
+  const scrolled = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+  document.getElementById('progress-bar').style.width = scrolled + '%';
+  const btn = document.getElementById('scroll-top');
+  if(window.scrollY > 400) btn.classList.add('show');
+  else btn.classList.remove('show');
+});
+
+// ACTIVE TOC HIGHLIGHT
+const sections = document.querySelectorAll('.section-card[id]');
+const tocLinks = document.querySelectorAll('.toc-item');
+window.addEventListener('scroll', () => {
+  let current = '';
+  sections.forEach(s => { if(window.scrollY >= s.offsetTop - 100) current = s.id; });
+  tocLinks.forEach(l => {
+    l.style.color = l.getAttribute('href') === '#'+current ? 'var(--accent2)' : '';
+    l.style.background = l.getAttribute('href') === '#'+current ? 'rgba(6,214,160,0.08)' : '';
+  });
+});
+</script>
+</body>
+</html>

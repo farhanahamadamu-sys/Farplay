@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog — FarPlay | Free Tools & Tech Tips India</title>
+<meta name="description" content="FarPlay blog — Free tools tips, coding tutorials, AI prompts guide, aur Indian tech news Hindi mein">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6566333205320776" crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0CGN70KXS7"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-0CGN70KXS7');</script>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0a0a0f;--surface:#13131a;--surface2:#1c1c28;--border:#2a2a3d;--accent:#7c3aed;--accent2:#06d6a0;--accent3:#f72585;--text:#e8e8f0;--text2:#8888aa;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;}
+nav{display:flex;align-items:center;justify-content:space-between;padding:1rem 2rem;border-bottom:1px solid var(--border);background:rgba(10,10,15,0.95);position:sticky;top:0;z-index:100;}
+.logo{font-family:'Syne',sans-serif;font-size:1.4rem;font-weight:800;text-decoration:none;color:var(--text);}.logo span{color:var(--accent2);}
+.nav-links a{color:var(--text2);text-decoration:none;font-size:0.85rem;margin-left:1rem;}
+.nav-links a:hover{color:var(--accent2);}
+.container{max-width:1100px;margin:0 auto;padding:2rem;}
+.hero{text-align:center;padding:3rem 0 2rem;}
+.hero h1{font-family:'Syne',sans-serif;font-size:2.5rem;font-weight:800;}
+.hero h1 span{color:var(--accent2);}
+.search-wrap{display:flex;gap:0.5rem;max-width:500px;margin:1.5rem auto 0;}
+.search-wrap input{flex:1;background:var(--surface2);border:1px solid var(--border);border-radius:10px;padding:0.7rem 1rem;color:var(--text);font-size:0.9rem;outline:none;}
+.search-wrap input:focus{border-color:var(--accent2);}
+.search-wrap button{background:var(--accent);color:#fff;border:none;border-radius:10px;padding:0.7rem 1.2rem;cursor:pointer;font-weight:600;}
+.categories{display:flex;gap:0.5rem;flex-wrap:wrap;margin:1.5rem 0;}
+.cat-btn{padding:0.4rem 1rem;border-radius:20px;border:1px solid var(--border);background:var(--surface);color:var(--text2);cursor:pointer;font-size:0.82rem;transition:all 0.2s;}
+.cat-btn.active,.cat-btn:hover{background:rgba(6,214,160,0.15);border-color:var(--accent2);color:var(--accent2);}
+.blog-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:1.5rem;}
+.blog-card{background:var(--surface);border:1px solid var(--border);border-radius:14px;overflow:hidden;transition:all 0.25s;cursor:pointer;}
+.blog-card:hover{border-color:var(--accent2);transform:translateY(-3px);}
+.blog-thumb{height:160px;display:flex;align-items:center;justify-content:center;font-size:4rem;position:relative;}
+.blog-body{padding:1.2rem;}
+.blog-cat{display:inline-block;padding:0.2rem 0.7rem;border-radius:20px;font-size:0.72rem;font-weight:600;margin-bottom:0.6rem;}
+.blog-title{font-weight:700;font-size:1rem;line-height:1.4;margin-bottom:0.5rem;}
+.blog-excerpt{font-size:0.82rem;color:var(--text2);line-height:1.6;margin-bottom:0.8rem;}
+.blog-meta{display:flex;justify-content:space-between;font-size:0.75rem;color:var(--text2);}
+.badge-tech{background:rgba(124,58,237,0.15);color:#a78bfa;border:1px solid rgba(124,58,237,0.3);}
+.badge-tools{background:rgba(6,214,160,0.15);color:var(--accent2);border:1px solid rgba(6,214,160,0.3);}
+.badge-ai{background:rgba(247,37,133,0.15);color:#f472b6;border:1px solid rgba(247,37,133,0.3);}
+.badge-india{background:rgba(255,153,0,0.15);color:#fb923c;border:1px solid rgba(255,153,0,0.3);}
+.badge-coding{background:rgba(96,165,250,0.15);color:#60a5fa;border:1px solid rgba(96,165,250,0.3);}
+
+/* ARTICLE VIEW */
+.article-view{display:none;max-width:800px;margin:0 auto;}
+.article-view.active{display:block;}
+.blog-list-view{display:block;}
+.blog-list-view.hidden{display:none;}
+.article-content{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:2rem;line-height:1.9;}
+.article-content h2{color:var(--accent2);margin:1.5rem 0 0.8rem;font-size:1.2rem;}
+.article-content h3{color:var(--text);margin:1.2rem 0 0.5rem;font-size:1rem;}
+.article-content p{margin-bottom:1rem;color:var(--text2);}
+.article-content ul{margin:0.8rem 0 1rem 1.5rem;color:var(--text2);}
+.article-content li{margin-bottom:0.4rem;}
+.article-content code{background:var(--surface2);padding:0.2rem 0.5rem;border-radius:4px;font-family:monospace;font-size:0.85rem;color:var(--accent2);}
+.article-content pre{background:var(--surface2);padding:1rem;border-radius:8px;margin:1rem 0;overflow-x:auto;}
+.back-btn{display:inline-flex;align-items:center;gap:0.5rem;color:var(--accent2);cursor:pointer;margin-bottom:1.5rem;font-size:0.9rem;}
+footer{border-top:1px solid var(--border);padding:1.5rem 2rem;text-align:center;color:var(--text2);font-size:0.8rem;margin-top:3rem;}
+footer a{color:var(--accent2);text-decoration:none;margin:0 0.5rem;}
+@media(max-width:600px){.blog-grid{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+<nav>
+  <a href="index.html" class="logo">Far<span>Play</span></a>
+  <div class="nav-links">
+    <a href="index.html">🏠 Home</a>
+    <a href="tools.html">🛠️ Tools</a>
+    <a href="about.html">ℹ️ About</a>
+    <a href="contact.html">📬 Contact</a>
+  </div>
+</nav>
+
+<div class="container">
+  <!-- BLOG LIST -->
+  <div class="blog-list-view" id="blog-list">
+    <div class="hero">
+      <h1>FarPlay <span>Blog</span></h1>
+      <p style="color:var(--text2);margin-top:0.5rem">Tech tips, AI guides, coding tutorials — Hindi mein 🇮🇳</p>
+      <div class="search-wrap">
+        <input id="blog-search" placeholder="🔍 Article dhundho..." oninput="filterBlog()">
+        <button onclick="filterBlog()">Search</button>
+      </div>
+    </div>
+
+    <div class="categories">
+      <button class="cat-btn active" onclick="filterCat('all',this)">🌐 All</button>
+      <button class="cat-btn" onclick="filterCat('ai',this)">🤖 AI</button>
+      <button class="cat-btn" onclick="filterCat('tools',this)">🛠️ Tools</button>
+      <button class="cat-btn" onclick="filterCat('coding',this)">💻 Coding</button>
+      <button class="cat-btn" onclick="filterCat('india',this)">🇮🇳 India Tech</button>
+      <button class="cat-btn" onclick="filterCat('tech',this)">⚡ Tech Tips</button>
+    </div>
+
+    <div class="blog-grid" id="blog-grid"></div>
+  </div>
+
+  <!-- ARTICLE VIEW -->
+  <div class="article-view" id="article-view">
+    <div class="back-btn" onclick="showBlogList()">← Wapas Blog pe</div>
+    <div id="article-content-area"></div>
+  </div>
+</div>
+
+<footer>
+  <div style="margin-bottom:0.5rem">
+    <a href="index.html">Home</a><a href="tools.html">Tools</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="contact.html">Contact</a>
+  </div>
+  © 2025 FarPlay — Made with ❤️ in India
+</footer>
+
+<script>
+const ARTICLES = [
+  {
+    id:1, cat:'ai', badge:'badge-ai', label:'🤖 AI',
+    thumb:'🤖', bg:'linear-gradient(135deg,#1a0a2e,#2d1458)',
+    title:'ChatGPT se Paisa Kaise Kamao — 2025 Guide',
+    excerpt:'ChatGPT ko use karke ghar baithe paise kamao — freelancing, content writing, aur business ideas ke saath.',
+    date:'June 1, 2025', readTime:'5 min',
+    content:`
+      <h2>ChatGPT se Paisa Kamana — Complete Guide 2025</h2>
+      <p>AI tools, khaaskar ChatGPT, ne income ke naye raaste khol diye hain. Is article mein hum dekhenge kaise aap ChatGPT ko use karke real paise kama sakte hain.</p>
+      <h2>1. Freelance Content Writing</h2>
+      <p>Content writing ek sabse aasaan tarika hai ChatGPT se paisa kamane ka. Aap Fiverr, Upwork ya Freelancer pe apni services list kar sakte hain.</p>
+      <ul>
+        <li>Blog articles likhna — ₹500 se ₹5000 per article</li>
+        <li>Product descriptions — ₹100 se ₹500 per description</li>
+        <li>Social media posts — ₹50 se ₹200 per post</li>
+        <li>Email newsletters — ₹500 se ₹2000 per newsletter</li>
+      </ul>
+      <h2>2. YouTube Script Writing</h2>
+      <p>YouTubers ko apne videos ke liye scripts chahiye hoti hain. ChatGPT se scripts likhkar aap ₹1000 se ₹10000 per script kama sakte hain.</p>
+      <h3>Kaise Shuru Karein?</h3>
+      <ul>
+        <li>Apna niche select karo (cooking, tech, finance, etc.)</li>
+        <li>Sample scripts banao aur portfolio ready karo</li>
+        <li>Fiverr pe gig create karo</li>
+        <li>Competitive pricing rakho shuru mein</li>
+      </ul>
+      <h2>3. AI Prompt Engineering</h2>
+      <p>Companies ko achhe AI prompts likhne ke liye professionals chahiye. Prompt engineer ki salary ₹5 lakh se ₹50 lakh per year tak ho sakti hai.</p>
+      <h2>4. Chatbot Development</h2>
+      <p>ChatGPT API use karke businesses ke liye custom chatbots banao. Ek chatbot project ₹10,000 se ₹1,00,000 tak ka ho sakta hai.</p>
+      <h2>5. Online Courses Banao</h2>
+      <p>ChatGPT use karke online courses ka content create karo aur Udemy ya apni website pe sell karo.</p>
+      <h2>Important Tips</h2>
+      <ul>
+        <li>Hamesha AI-generated content ko edit aur personalize karo</li>
+        <li>Quality pe focus karo, quantity pe nahi</li>
+        <li>Clients ko clearly batao ki AI tools use hote hain</li>
+        <li>Apni writing skills bhi improve karte raho</li>
+      </ul>
+      <p>ChatGPT ek powerful tool hai — lekin success ke liye creativity aur mehnat dono zaroori hain!</p>
+    `
+  },
+  {
+    id:2, cat:'tools', badge:'badge-tools', label:'🛠️ Tools',
+    thumb:'🛠️', bg:'linear-gradient(135deg,#0a1a0f,#1a4a2e)',
+    title:'FarPlay ke Best Free Tools — Poori List 2025',
+    excerpt:'FarPlay pe available sare free tools ki complete list — students aur professionals dono ke liye.',
+    date:'May 30, 2025', readTime:'4 min',
+    content:`
+      <h2>FarPlay Free Tools — Complete Guide</h2>
+      <p>FarPlay India ka ek free online tools platform hai. Yahan aapko 20+ tools milenge jo daily life mein kaam aate hain.</p>
+      <h2>🇮🇳 Indian Tools</h2>
+      <ul>
+        <li><strong>GST Calculator</strong> — Business ke liye GST instantly calculate karo</li>
+        <li><strong>UPI QR Generator</strong> — Apna payment QR code banao</li>
+        <li><strong>Pincode Finder</strong> — Pincode se address aur post office details</li>
+        <li><strong>EMI Calculator</strong> — Loan ki monthly EMI calculate karo</li>
+      </ul>
+      <h2>💻 Developer Tools</h2>
+      <ul>
+        <li><strong>Online Code Editor</strong> — HTML, CSS, JS, Python browser mein run karo</li>
+        <li><strong>JSON Formatter</strong> — JSON validate aur beautify karo</li>
+        <li><strong>Color Picker</strong> — HEX, RGB, HSL color codes</li>
+        <li><strong>Password Generator</strong> — Strong passwords banao</li>
+      </ul>
+      <h2>🎯 Daily Use Tools</h2>
+      <ul>
+        <li><strong>QR Code Generator</strong> — Kisi bhi link ka QR banao</li>
+        <li><strong>Unit Converter</strong> — Length, weight, temperature convert karo</li>
+        <li><strong>Word Counter</strong> — Text ka word aur character count</li>
+        <li><strong>Percentage Calculator</strong> — Discount, marks calculate karo</li>
+        <li><strong>YouTube Thumbnail Downloader</strong> — HD thumbnail download karo</li>
+      </ul>
+      <h2>🎮 Fun Tools</h2>
+      <ul>
+        <li>Snake Game, Tic Tac Toe, Quiz App</li>
+        <li>Coin Flip, BMI Calculator, Age Calculator</li>
+        <li>Text to Voice (Hindi + English)</li>
+        <li>Pomodoro Timer, Decision Maker</li>
+      </ul>
+      <p>Sare tools bilkul FREE hain — koi registration required nahi!</p>
+    `
+  },
+  {
+    id:3, cat:'coding', badge:'badge-coding', label:'💻 Coding',
+    thumb:'💻', bg:'linear-gradient(135deg,#0a0f1a,#1a2a4a)',
+    title:'HTML CSS JavaScript Seekhna — Beginners ke liye Complete Guide',
+    excerpt:'Coding ki duniya mein pehla kadam kaise rakhein — HTML se lekar JavaScript tak, Hindi mein samjhaya.',
+    date:'May 28, 2025', readTime:'8 min',
+    content:`
+      <h2>Web Development Kaise Seekhein — 2025 Guide</h2>
+      <p>Coding seekhna aaj ke zamane mein ek bahut valuable skill hai. Is guide mein hum dekhenge kaise aap HTML, CSS aur JavaScript seekh sakte hain — bilkul scratch se.</p>
+      <h2>Step 1: HTML — Website ki Neenv</h2>
+      <p>HTML (HyperText Markup Language) har website ki neenv hai. Yeh website ka structure banata hai.</p>
+      <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Meri Pehli Website&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Namaste Duniya!&lt;/h1&gt;
+    &lt;p&gt;Yeh meri pehli website hai!&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+      <h2>Step 2: CSS — Website ko Sundar Banao</h2>
+      <p>CSS (Cascading Style Sheets) website ko design karta hai — colors, fonts, layouts sab CSS se hote hain.</p>
+      <h2>Step 3: JavaScript — Website ko Interactive Banao</h2>
+      <p>JavaScript se aap website mein interactivity add kar sakte hain — buttons, animations, forms sab JavaScript se chalte hain.</p>
+      <h2>Free Resources</h2>
+      <ul>
+        <li>FarPlay Code Editor — Browser mein practice karo</li>
+        <li>MDN Web Docs — Best documentation</li>
+        <li>freeCodeCamp — Free coding courses</li>
+        <li>YouTube — Apna Collage, Code with Harry</li>
+      </ul>
+      <h2>Kitna Time Lagega?</h2>
+      <ul>
+        <li>HTML Basic — 1 hafte mein</li>
+        <li>CSS Basic — 2 hafte mein</li>
+        <li>JavaScript Basic — 1 mahine mein</li>
+        <li>First Project — 2 mahine mein</li>
+      </ul>
+      <p>Roz 1-2 ghante practice karo — 3 mahine mein aap ek basic website bana sakte hain!</p>
+    `
+  },
+  {
+    id:4, cat:'india', badge:'badge-india', label:'🇮🇳 India Tech',
+    thumb:'🇮🇳', bg:'linear-gradient(135deg,#1a0a00,#3a2a00)',
+    title:'India mein Top 10 Free Government Digital Tools 2025',
+    excerpt:'Indian government ke free digital tools jo har nagrik ko pata hone chahiye — DigiLocker se lekar UMANG tak.',
+    date:'May 25, 2025', readTime:'6 min',
+    content:`
+      <h2>India ke Top Government Digital Tools</h2>
+      <p>Indian government ne kai powerful free digital tools banaye hain jo har Indian ke liye useful hain. Aaj hum unke baare mein janenge.</p>
+      <h2>1. DigiLocker</h2>
+      <p>DigiLocker aapke sabhi documents (Aadhaar, PAN, Driving License, Marksheets) ko digitally store karta hai. Kabhi bhi, kaheen bhi access karo.</p>
+      <h2>2. UMANG App</h2>
+      <p>UMANG (Unified Mobile Application for New-age Governance) ek single platform hai jahan 1200+ government services milti hain — PF check karna, gas booking, passport status sab.</p>
+      <h2>3. mAadhaar</h2>
+      <p>Official Aadhaar app — apna Aadhaar card phone mein rakho aur kisi bhi government office mein use karo.</p>
+      <h2>4. Income Tax e-Filing Portal</h2>
+      <p>incometax.gov.in — ITR file karo, tax calculate karo, refund status check karo — bilkul free.</p>
+      <h2>5. EPFO Member Portal</h2>
+      <p>Apna PF balance check karo, withdrawal request karo — sab kuch online.</p>
+      <h2>6. CoWIN</h2>
+      <p>Vaccination certificate download karo, appointments book karo.</p>
+      <h2>7. eNAM</h2>
+      <p>Farmers ke liye — apni fasal online sell karo, better prices pao.</p>
+      <h2>8. PM Kisan Portal</h2>
+      <p>PM Kisan scheme ka status check karo, payment history dekho.</p>
+      <h2>9. India Post Tracking</h2>
+      <p>Apne parcel aur money order track karo real-time mein.</p>
+      <h2>10. Skill India Portal</h2>
+      <p>Free courses karo aur government certificate pao — job paane mein help karega.</p>
+    `
+  },
+  {
+    id:5, cat:'ai', badge:'badge-ai', label:'🤖 AI',
+    thumb:'✨', bg:'linear-gradient(135deg,#1a0a1a,#3a0a3a)',
+    title:'Best AI Prompts 2025 — ChatGPT aur Gemini ke liye',
+    excerpt:'Powerful AI prompts jo aapki productivity 10x kar denge — students, writers aur professionals ke liye.',
+    date:'May 22, 2025', readTime:'7 min',
+    content:`
+      <h2>Best AI Prompts Guide 2025</h2>
+      <p>Sahi prompt likhna ek art hai. Is guide mein hum dekhenge kaise perfect prompts likhein jo best results dein.</p>
+      <h2>Prompt Writing ke Golden Rules</h2>
+      <ul>
+        <li><strong>Role assign karo</strong> — "Act as a [expert]..."</li>
+        <li><strong>Context do</strong> — Background information include karo</li>
+        <li><strong>Format specify karo</strong> — "Table mein batao", "5 points mein"</li>
+        <li><strong>Example do</strong> — "Jaise ki..." se result better hota hai</li>
+      </ul>
+      <h2>Student ke liye Best Prompts</h2>
+      <ul>
+        <li>"[Topic] ko ek 10 saal ke bacche ko samjhane ke tarike se explain karo"</li>
+        <li>"[Subject] ke top 20 important questions banao exam ke liye"</li>
+        <li>"[Concept] ka ek short summary 5 bullet points mein do"</li>
+      </ul>
+      <h2>Writer ke liye Best Prompts</h2>
+      <ul>
+        <li>"[Topic] pe ek engaging blog post likhao — SEO friendly, 1000 words"</li>
+        <li>"Mera article improve karo: [paste article] — tone professional rakho"</li>
+        <li>"[Product] ke liye 5 catchy headlines do"</li>
+      </ul>
+      <h2>Business ke liye Best Prompts</h2>
+      <ul>
+        <li>"[Business idea] ka SWOT analysis karo"</li>
+        <li>"[Product] ke liye marketing strategy banao — budget ₹10,000/month"</li>
+        <li>"Professional email likhao [situation] ke liye"</li>
+      </ul>
+      <p>FarPlay pe Daily AI Prompts section mein roz naye prompts milte hain — check karo!</p>
+    `
+  },
+  {
+    id:6, cat:'tech', badge:'badge-tech', label:'⚡ Tech Tips',
+    thumb:'📱', bg:'linear-gradient(135deg,#0a1a1a,#0a3a3a)',
+    title:'Android Phone ki Speed Kaise Badhayein — 10 Tips',
+    excerpt:'Purana Android phone slow ho gaya? Yeh 10 tips se apne phone ko naya jaisa fast banao — bina factory reset ke.',
+    date:'May 20, 2025', readTime:'5 min',
+    content:`
+      <h2>Android Phone Fast Karo — 10 Proven Tips</h2>
+      <p>Kya aapka Android phone slow ho gaya hai? Ghabrao mat! Yeh 10 tips se aap apne phone ki speed dramatically improve kar sakte hain.</p>
+      <h2>1. Unnecessary Apps Delete Karo</h2>
+      <p>Jo apps aap use nahi karte unhe uninstall karo. Settings > Apps > Installed Apps mein jaao aur dekho kaunse apps zyada storage le rahe hain.</p>
+      <h2>2. Cache Clear Karo</h2>
+      <p>Settings > Storage > Cached Data mein jaao aur cache clear karo. Yeh free space create karta hai aur performance improve karta hai.</p>
+      <h2>3. Live Wallpaper Band Karo</h2>
+      <p>Live wallpapers battery aur RAM dono use karte hain. Simple static wallpaper use karo.</p>
+      <h2>4. Background Apps Band Karo</h2>
+      <p>Developer Options mein jaao aur "Background Process Limit" set karo. Yeh RAM bachata hai.</p>
+      <h2>5. Animation Speed Kam Karo</h2>
+      <p>Developer Options > Window Animation Scale, Transition Animation Scale — sab 0.5x ya off kar do. Phone instantly faster lagega!</p>
+      <h2>6. Storage Khaali Karo</h2>
+      <p>Phone ka storage 80% se zyada na bharo. Old photos Google Photos mein backup karke delete karo.</p>
+      <h2>7. Regular Restart Karo</h2>
+      <p>Hafte mein ek baar phone restart karo — RAM clear hota hai aur performance improve hoti hai.</p>
+      <h2>8. Auto-Sync Limit Karo</h2>
+      <p>Settings > Accounts mein unnecessary account sync band karo.</p>
+      <h2>9. Lite Version Apps Use Karo</h2>
+      <p>Facebook Lite, YouTube Go, Instagram Lite — yeh apps kam RAM use karte hain.</p>
+      <h2>10. Software Update Karo</h2>
+      <p>Latest Android updates mein performance improvements hote hain — update karte raho.</p>
+      <p>In tips se aapka phone definitely faster ho jaayega!</p>
+    `
+  },
+  {
+    id:7, cat:'coding', badge:'badge-coding', label:'💻 Coding',
+    thumb:'🐍', bg:'linear-gradient(135deg,#0a1a0a,#1a3a1a)',
+    title:'Python Programming Kaise Seekhein — 30 Din mein',
+    excerpt:'Python programming language ko 30 din mein seekhne ka complete roadmap — bilkul beginners ke liye, Hindi mein.',
+    date:'May 18, 2025', readTime:'9 min',
+    content:`
+      <h2>Python 30 Din mein Seekho — Complete Roadmap</h2>
+      <p>Python duniya ki sabse popular programming language hai. Simple syntax aur powerful features ki wajah se yeh beginners ke liye perfect hai.</p>
+      <h2>Python Kyun Seekhein?</h2>
+      <ul>
+        <li>Sabse aasaan programming language — English jaisi syntax</li>
+        <li>AI/ML ke liye #1 choice</li>
+        <li>High salary — ₹5 lakh se ₹50 lakh per year</li>
+        <li>Data Science, Web Development, Automation sab mein use</li>
+      </ul>
+      <h2>Week 1: Basics (Din 1-7)</h2>
+      <ul>
+        <li>Din 1-2: Variables, Data Types, Print</li>
+        <li>Din 3-4: Conditions (if/else)</li>
+        <li>Din 5-6: Loops (for, while)</li>
+        <li>Din 7: Practice problems</li>
+      </ul>
+      <h2>Week 2: Functions & Data (Din 8-14)</h2>
+      <ul>
+        <li>Din 8-9: Functions</li>
+        <li>Din 10-11: Lists, Tuples, Dictionaries</li>
+        <li>Din 12-13: File handling</li>
+        <li>Din 14: Mini project — Calculator</li>
+      </ul>
+      <h2>Week 3: OOP & Libraries (Din 15-21)</h2>
+      <ul>
+        <li>Din 15-17: Object Oriented Programming</li>
+        <li>Din 18-19: Popular libraries (requests, os)</li>
+        <li>Din 20-21: Web scraping basics</li>
+      </ul>
+      <h2>Week 4: Projects (Din 22-30)</h2>
+      <ul>
+        <li>Din 22-25: Todo App banao</li>
+        <li>Din 26-28: Weather App API se</li>
+        <li>Din 29-30: Final project + GitHub pe upload</li>
+      </ul>
+      <h2>Practice Resources</h2>
+      <ul>
+        <li>FarPlay Code Editor — Browser mein Python run karo</li>
+        <li>HackerRank — Python challenges</li>
+        <li>LeetCode — Interview preparation</li>
+      </ul>
+      <p>Roz 2 ghante do — 30 din mein aap confidently Python code likh sakte hain!</p>
+    `
+  },
+  {
+    id:8, cat:'india', badge:'badge-india', label:'🇮🇳 India Tech',
+    thumb:'💰', bg:'linear-gradient(135deg,#1a1a0a,#3a3a0a)',
+    title:'UPI Tips & Tricks — Jo 90% Log Nahi Jaante',
+    excerpt:'UPI ke hidden features aur tips jo aapki digital payments ko aur aasaan aur safe banayenge.',
+    date:'May 15, 2025', readTime:'5 min',
+    content:`
+      <h2>UPI ke Secret Tips & Tricks</h2>
+      <p>UPI ne India mein payment revolution la diya hai. Lekin kya aap jaante hain UPI ke sare hidden features? Chalo jaante hain!</p>
+      <h2>1. UPI Lite — Small Payments Bina PIN ke</h2>
+      <p>UPI Lite se aap ₹500 tak ke payments bina PIN daale kar sakte hain. Bahut fast aur convenient!</p>
+      <h2>2. Scheduled Payments</h2>
+      <p>Future date pe automatic payment set kar sakte hain — EMI, subscriptions ke liye perfect.</p>
+      <h2>3. UPI AutoPay</h2>
+      <p>Recurring payments jaise Netflix, insurance premium ke liye AutoPay set karo — har baar manually pay nahi karna padega.</p>
+      <h2>4. UPI ID Customization</h2>
+      <p>Apna UPI ID customize karo — numbers ki jagah naam use karo. Yaad rakhna aur share karna dono aasaan ho jaata hai.</p>
+      <h2>5. Transaction Limit</h2>
+      <p>UPI se ek din mein ₹1 lakh tak transfer ho sakta hai. Banks ki special limit alag ho sakti hai.</p>
+      <h2>UPI Safety Tips</h2>
+      <ul>
+        <li>Kabhi bhi UPI PIN kisi se share mat karo</li>
+        <li>Collect Money request carefully verify karo</li>
+        <li>Unknown numbers se QR scan mat karo</li>
+        <li>Koi bhi aapko refund ke liye PIN nahi maangega — yeh fraud hai!</li>
+      </ul>
+      <h2>FarPlay UPI QR Generator</h2>
+      <p>FarPlay pe free UPI QR Generator use karo — apna UPI ID aur naam enter karo, ek second mein QR ready!</p>
+    `
+  },
+];
+
+let currentCat = 'all';
+
+function renderBlog(articles) {
+  const grid = document.getElementById('blog-grid');
+  if(!articles.length) { grid.innerHTML='<div style="color:var(--text2);text-align:center;padding:3rem;grid-column:1/-1">Koi article nahi mila 😔</div>'; return; }
+  grid.innerHTML = articles.map(a => `
+    <div class="blog-card" onclick="showArticle(${a.id})">
+      <div class="blog-thumb" style="background:${a.bg}">${a.thumb}</div>
+      <div class="blog-body">
+        <span class="blog-cat ${a.badge}">${a.label}</span>
+        <div class="blog-title">${a.title}</div>
+        <div class="blog-excerpt">${a.excerpt}</div>
+        <div class="blog-meta"><span>📅 ${a.date}</span><span>⏱️ ${a.readTime} read</span></div>
+      </div>
+    </div>
+  `).join('');
+}
+
+function filterCat(cat, btn) {
+  currentCat = cat;
+  document.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  filterBlog();
+}
+
+function filterBlog() {
+  const q = document.getElementById('blog-search')?.value?.toLowerCase() || '';
+  let filtered = ARTICLES;
+  if(currentCat !== 'all') filtered = filtered.filter(a => a.cat === currentCat);
+  if(q) filtered = filtered.filter(a => a.title.toLowerCase().includes(q) || a.excerpt.toLowerCase().includes(q));
+  renderBlog(filtered);
+}
+
+function showArticle(id) {
+  const article = ARTICLES.find(a => a.id === id);
+  if(!article) return;
+  document.getElementById('blog-list').classList.add('hidden');
+  document.getElementById('article-view').classList.add('active');
+  document.getElementById('article-content-area').innerHTML = `
+    <div style="margin-bottom:1rem">
+      <span class="blog-cat ${article.badge}" style="display:inline-block;padding:0.3rem 0.8rem;border-radius:20px;font-size:0.78rem;font-weight:600">${article.label}</span>
+    </div>
+    <h1 style="font-family:'Syne',sans-serif;font-size:1.8rem;font-weight:800;margin-bottom:0.5rem;line-height:1.3">${article.title}</h1>
+    <div style="color:var(--text2);font-size:0.82rem;margin-bottom:1.5rem">📅 ${article.date} &nbsp;|&nbsp; ⏱️ ${article.readTime} read</div>
+    <div class="article-content">${article.content}</div>
+    <div style="margin-top:1.5rem;background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:1.2rem;text-align:center">
+      <div style="margin-bottom:0.5rem;font-weight:600">Aur articles padhna hai?</div>
+      <button onclick="showBlogList()" style="background:var(--accent);color:#fff;border:none;border-radius:8px;padding:0.6rem 1.5rem;cursor:pointer;font-weight:600">← Blog pe Wapas Jao</button>
+    </div>
+  `;
+  window.scrollTo(0,0);
+}
+
+function showBlogList() {
+  document.getElementById('blog-list').classList.remove('hidden');
+  document.getElementById('article-view').classList.remove('active');
+  window.scrollTo(0,0);
+}
+
+// Init
+renderBlog(ARTICLES);
+</script>
+</body>
+</html>
